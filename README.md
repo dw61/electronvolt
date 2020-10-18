@@ -89,3 +89,9 @@ Out[9]: 0.8516649166602738
 ```
 
 This matches the value calculated using method 1.
+
+# Usage
+
+Open `modern.ipynb` in jupyter notebook.
+
+If you need to install install jupyter notebook, you can find it from [Anaconda](https://www.anaconda.com/products/individual). Alternatively, a quick and dirty way is to copy the code from `modern.ipynb` and run it using a python interpreter.
