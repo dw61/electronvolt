@@ -96,4 +96,4 @@ Run `modern.ipynb` in jupyter notebook (recommended).
 
 If you need to install jupyter notebook, you can find it from [Anaconda](https://www.anaconda.com/products/individual).
 
-Alternatively, run `modern.py`.
+Alternatively, run `modern.py` by entering `python -i modern.py` in shell. Make sure you use python 3.

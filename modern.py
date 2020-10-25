@@ -289,21 +289,3 @@ assert 2 * kg != 3 * kg
 assert N / C in V / m
 assert kg * c**2 in J
 assert MeVpc2 == 1.7826619216278976e-30 * kg
-
-
-# commandline support
-
-import traceback
-if __name__ == '__main__':
-    while True:
-        s = input('>>> ') # fake
-        if '=' in s or not s: # sacrificing == and !=
-            try:
-                exec(s)
-            except Exception as e:
-                traceback.print_exc()
-        else:
-            try:
-                print(eval(s))
-            except Exception as e:
-                traceback.print_exc()
