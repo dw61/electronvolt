@@ -1,8 +1,8 @@
 # Modern
 
-A physical quantity calculator with units, using  with jupyter notebook.
+A physical quantity calculator with units, using jupyter notebook.
 
-## First Demo
+## Demo
 
 #### Calculate the rest mass energy of an electron.
 
@@ -30,7 +30,7 @@ Out[3]: 0.5109989499961642
 
 This matches the rest mass energy of electron from [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
 
-## Another Demo
+<!-- ## Another Demo
 
 Calculating the relativistic total energy of electron moving at 0.8c.
 
@@ -88,9 +88,9 @@ In[9]: (p**2 * c**2 + me**2 * c**4) ** 0.5 / MeV
 Out[9]: 0.8516649166602738
 ```
 
-This matches the value calculated using method 1.
+This matches the value calculated using method 1. -->
 
-# Usage
+## Usage
 
 Run `modern.ipynb` in jupyter notebook (recommended).
 
