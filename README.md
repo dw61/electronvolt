@@ -92,8 +92,6 @@ This matches the value calculated using method 1. -->
 
 ## Usage
 
-Run `modern.ipynb` in jupyter notebook (recommended).
+Run `modern.ipynb` in jupyter notebook (recommended). If you need to install jupyter notebook, you can find it from [Anaconda](https://www.anaconda.com/products/individual).
 
-If you need to install jupyter notebook, you can find it from [Anaconda](https://www.anaconda.com/products/individual).
-
-Alternatively, run `modern.py` by entering `python -i modern.py` in shell. Make sure you use python 3.
+Alternatively, run `modern.py` via `python -i modern.py` in shell. Make sure you use python 3.
