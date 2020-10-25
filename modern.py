@@ -297,10 +297,13 @@ import traceback
 if __name__ == '__main__':
     while True:
         s = input('>>> ')
-        try:
-            print(eval(s))
-        except Exception as e:
+        if '=' in s or not s: # sacrificing == and !=
             try:
                 exec(s)
+            except Exception as e:
+                traceback.print_exc()
+        else:
+            try:
+                print(eval(s))
             except Exception as e:
                 traceback.print_exc()
