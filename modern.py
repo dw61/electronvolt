@@ -296,7 +296,7 @@ assert MeVpc2 == 1.7826619216278976e-30 * kg
 import traceback
 if __name__ == '__main__':
     while True:
-        s = input('>>> ')
+        s = input('>>> ') # fake
         if '=' in s or not s: # sacrificing == and !=
             try:
                 exec(s)
