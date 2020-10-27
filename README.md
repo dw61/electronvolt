@@ -1,4 +1,4 @@
-# MeVpc2
+# mevpc2
 
 A physical quantity calculator with units.
 
