@@ -1,0 +1,6 @@
+README.md
+setup.py
+modern.egg-info/PKG-INFO
+modern.egg-info/SOURCES.txt
+modern.egg-info/dependency_links.txt
+modern.egg-info/top_level.txt

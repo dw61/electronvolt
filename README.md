@@ -1,6 +1,6 @@
-# Modern
+# MeVpc2
 
-A physical quantity calculator with units, using jupyter notebook.
+A physical quantity calculator with units.
 
 ## Demo
 
@@ -92,6 +92,6 @@ This matches the value calculated using method 1. -->
 
 ## Usage
 
-Run `modern.ipynb` in jupyter notebook (recommended). If you need to install jupyter notebook, you can find it from [Anaconda](https://www.anaconda.com/products/individual).
+Run `mevpc2.ipynb` in jupyter notebook (recommended). If you need to install jupyter notebook, you can find it from [Anaconda](https://www.anaconda.com/products/individual).
 
-Alternatively, run `modern.py` via `python -i modern.py` in shell. Make sure you use python 3.
+Alternatively, run `mevpc2.py` via `python -i mevpc2.py` in shell. Make sure you use python 3.
