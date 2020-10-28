@@ -1,5 +1,9 @@
-from math import *
+# check for domain and range issues for trigonometry
+# simplify unit printing format
+# improve communications on defined quantity, e.g. print table of variables
+# fine tune math imports
 
+from math import *
 
 # Unit converter.
 class Unit:
@@ -7,7 +11,7 @@ class Unit:
     def __init__(self, d):
         self.d = {unit:power for unit, power in d.items() if power} # remove zero power
 
-    def __repr__(self): # for commandline convenience. __str__ redirects here by default
+    def __repr__(self): # for commandline convenience. __str__ redirects here
         terms = []
         for unit, power in self.d.items():
             if power == 1:
@@ -16,8 +20,8 @@ class Unit:
                 terms.append('{0}**{1}'.format(unit, power))
         return ' * '.join(terms)
 
-    def __eq__(self, other): # prevent 'same unit but are different objects'
-        return self.d == other.d #__ne__ is negation of __eq__ in python 3
+    def __eq__(self, other):
+        return self.d == other.d
 
     def __mul__(self, other):
         units = set(self.d) | set(other.d)
@@ -35,7 +39,6 @@ class Unit:
 
     def __bool__(self):
         return bool(self.d)
-
 
 # Physical quantity calculator.
 class Quantity:
@@ -62,7 +65,7 @@ class Quantity:
     def __sub__(self, other):
         if isinstance(other, (int, float)): # handles 1*kg/kg - 1
             return self - Quantity(other, Unit({}))
-        assert self.unit == other.unit # check for same unit
+        assert self.unit == other.unit
         return Quantity(self.value - other.value, self.unit)
 
     def __neg__(self):
@@ -100,8 +103,7 @@ class Quantity:
         assert not self.unit
         return float(self.value)
 
-
-# trigonometry. currently has some domain and range issues unresolved
+# trigonometry
 # https://en.wikipedia.org/wiki/Trigonometric_functions
 # https://en.wikipedia.org/wiki/Inverse_trigonometric_functions
 # https://en.wikipedia.org/wiki/Hyperbolic_functions
@@ -146,7 +148,6 @@ acsch = lambda x : asinh(1 / x)
 asech = lambda x : acosh(1 / x)
 acoth = lambda x : atanh(1 / x)
 
-
 # SI metric prefixes
 # https://en.wikipedia.org/wiki/Metric_prefix
 
@@ -172,7 +173,6 @@ atto = 1e-18
 zepto = 1e-21
 yocto = 1e-24
 
-
 # SI units
 
 kg = Quantity(1, Unit({'kg' : 1}))
@@ -182,7 +182,6 @@ A = Quantity(1, Unit({'A' : 1}))
 mol = Quantity(1, Unit({'mol' : 1}))
 K = Quantity(1, Unit({'K' : 1}))
 Cd = Quantity(1, Unit({'Cd' : 1}))
-
 
 # derived units
 
@@ -200,29 +199,6 @@ T = V * s / m**2 # Tesla
 Wb = T * m**2 # Weber
 Ohm = V / A # Ohm
 H = Ohm * s # Joseph Henry
-
-
-# physical quantities. deprecated
-
-_m = kg # mass
-_v = m / s # velocity
-_a = m / s**2 # acceleration
-_j = m / s**3 # jerk
-_p = kg * _v # momentum
-
-_omega = 1 / s # angular velocity
-_alpha = 1 / s**2 # angular acceleration
-_L = kg * m * _v # angular momentum
-_I = kg * m**2 # moment of inertia
-_M = N * m # torque
-
-_l = m # length
-_A = m**2 # area
-_V = m**3 # volume
-_rho = kg / m**3 # density
-
-_E = N / C # electric field
-
 
 # physicsal constants
 # https://en.wikipedia.org/wiki/List_of_physical_constants
@@ -242,9 +218,6 @@ mn = 1.67492749804e-27 * kg # neutron mass
 Da = 1.66053906660e-27 * kg # dalton, atomic mass constant
 R = NA * kB # ideal gas constant
 sigma = 5.670374419e-8 * W / m**2 / K**4 # Stefan-Boltzmann constant
-
-
-# more constants
 
 ms = milli * s # millisecond
 micros = micro * s # microsecond
@@ -277,10 +250,9 @@ TeV = tera * eV # tetra electronvolt
 MeVpc2 = MeV / c**2 # mega electronvolt per c squared
 
 a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
-hground = - me * e**4 / (32 * pi**2 * epsilon0**2 * hbar**2) # ground state hydrogen energy level
+hground = -me * e**4 / (32 * pi**2 * epsilon0**2 * hbar**2) # ground state hydrogen energy level
 Rinfinity = me * e**4 / (64 * pi**3 * epsilon0**2 * hbar**3 * c) # Rydberg constant
 alpha = 1 / (4 * pi * epsilon0) * e**2 / (hbar * c) # fine structure constant
-
 
 # testings
 
@@ -288,4 +260,6 @@ assert 1 * m != 1 * kg
 assert 2 * kg != 3 * kg
 assert N / C in V / m
 assert kg * c**2 in J
-assert MeVpc2 == 1.7826619216278976e-30 * kg
+assert hbar == 1.0545718176461565e-34 * kg * m**2 * s**-1
+
+print(hbar)
