@@ -1,3 +1,10 @@
+# usage
+# update README.md
+# update version number in setuptools.setup
+# python setup.py sdist bdist_wheel
+# twine upload dist/*
+# rm -r build dist *.egg-info
+
 import setuptools
 
 with open("README.md", "r") as f:
