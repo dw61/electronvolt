@@ -4,8 +4,10 @@
 # python setup.py sdist bdist_wheel
 # twine upload dist/*
 # rm -r build dist *.egg-info
-# git commit and push
 # check on https://pypi.org/project/hbar
+# pip install hbar -U
+# test importing and using at home directory
+# git commit and push
 # check on https://github.com/DiegoWang51/hbar
 
 import setuptools
@@ -15,7 +17,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="hbar",
-    version="0.0.5",
+    version="0.1.1",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator with units.",
     long_description=long_description,

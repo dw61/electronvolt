@@ -2,6 +2,7 @@
 # trim unit printing format
 # improve communications on defined quantity, e.g. print table of variables
 # fine tune math imports
+# make or .sh for version upgrade commandline automation
 
 from math import *
 
@@ -261,5 +262,3 @@ assert 2 * kg != 3 * kg
 assert N / C in V / m
 assert kg * c**2 in J
 assert hbar == 1.0545718176461565e-34 * kg * m**2 * s**-1
-
-print(hbar)
