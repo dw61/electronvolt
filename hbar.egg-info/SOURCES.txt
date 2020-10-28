@@ -1,0 +1,7 @@
+README.md
+hbar.py
+setup.py
+hbar.egg-info/PKG-INFO
+hbar.egg-info/SOURCES.txt
+hbar.egg-info/dependency_links.txt
+hbar.egg-info/top_level.txt

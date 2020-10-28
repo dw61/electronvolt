@@ -1,4 +1,4 @@
-# mevpc2
+# hbar
 
 A physical quantity calculator with units.
 
@@ -92,6 +92,6 @@ This matches the value calculated using method 1. -->
 
 ## Usage
 
-Run `mevpc2.ipynb` in jupyter notebook (recommended). If you need to install jupyter notebook, you can find it from [Anaconda](https://www.anaconda.com/products/individual).
+Run `modern.ipynb` in jupyter notebook (recommended). If you need to install jupyter notebook, you can find it from [Anaconda](https://www.anaconda.com/products/individual).
 
-Alternatively, run `mevpc2.py` via `python -i mevpc2.py` in shell. Make sure you use python 3.
+Alternatively, run `hbar.py` via `python -i hbar.py` in shell. Make sure you use python 3.
