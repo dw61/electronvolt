@@ -3,6 +3,7 @@
 # improve communications on defined quantity, e.g. print table of variables
 # fine tune math imports
 # make or .sh for version upgrade commandline automation
+# change naming convension from me to m_e
 
 from math import *
 
