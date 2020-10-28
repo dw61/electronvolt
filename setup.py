@@ -4,10 +4,10 @@
 # python setup.py sdist bdist_wheel
 # twine upload dist/*
 # rm -r build dist *.egg-info
-# check on https://pypi.org/project/hbar
 # pip install hbar -U
 # test importing and using at home directory
 # git commit and push
+# check on https://pypi.org/project/hbar
 # check on https://github.com/DiegoWang51/hbar
 
 import setuptools
