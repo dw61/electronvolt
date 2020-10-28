@@ -1,5 +1,5 @@
 # check for domain and range issues for trigonometry
-# simplify unit printing format
+# trim unit printing format
 # improve communications on defined quantity, e.g. print table of variables
 # fine tune math imports
 
