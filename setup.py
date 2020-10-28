@@ -1,4 +1,3 @@
-# usage
 # git pull
 # update README.md
 # update version number in setuptools.setup
