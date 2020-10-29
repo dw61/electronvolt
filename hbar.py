@@ -1,11 +1,25 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 # check for domain and range issues for trigonometry
 # trim unit printing format
 # improve communications on defined quantity, e.g. print table of variables
 # fine tune math imports
 # make or .sh for version upgrade commandline automation
-# change naming convension from me to m_e
+# change naming convension from me to m_e, e to q_e, etc.
+
+
+# In[ ]:
+
 
 from math import *
+
+
+# In[ ]:
+
 
 # Unit converter.
 class Unit:
@@ -41,6 +55,10 @@ class Unit:
 
     def __bool__(self):
         return bool(self.d)
+
+
+# In[ ]:
+
 
 # Physical quantity calculator.
 class Quantity:
@@ -105,6 +123,10 @@ class Quantity:
         assert not self.unit
         return float(self.value)
 
+
+# In[ ]:
+
+
 # trigonometry
 # https://en.wikipedia.org/wiki/Trigonometric_functions
 # https://en.wikipedia.org/wiki/Inverse_trigonometric_functions
@@ -150,6 +172,10 @@ acsch = lambda x : asinh(1 / x)
 asech = lambda x : acosh(1 / x)
 acoth = lambda x : atanh(1 / x)
 
+
+# In[ ]:
+
+
 # SI metric prefixes
 # https://en.wikipedia.org/wiki/Metric_prefix
 
@@ -175,6 +201,10 @@ atto = 1e-18
 zepto = 1e-21
 yocto = 1e-24
 
+
+# In[ ]:
+
+
 # SI units
 
 kg = Quantity(1, Unit({'kg' : 1}))
@@ -184,6 +214,10 @@ A = Quantity(1, Unit({'A' : 1}))
 mol = Quantity(1, Unit({'mol' : 1}))
 K = Quantity(1, Unit({'K' : 1}))
 Cd = Quantity(1, Unit({'Cd' : 1}))
+
+
+# In[ ]:
+
 
 # derived units
 
@@ -201,6 +235,10 @@ T = V * s / m**2 # Tesla
 Wb = T * m**2 # Weber
 Ohm = V / A # Ohm
 H = Ohm * s # Joseph Henry
+
+
+# In[ ]:
+
 
 # physicsal constants
 # https://en.wikipedia.org/wiki/List_of_physical_constants
@@ -220,6 +258,12 @@ mn = 1.67492749804e-27 * kg # neutron mass
 Da = 1.66053906660e-27 * kg # dalton, atomic mass constant
 R = NA * kB # ideal gas constant
 sigma = 5.670374419e-8 * W / m**2 / K**4 # Stefan-Boltzmann constant
+
+
+# In[ ]:
+
+
+# more constants
 
 ms = milli * s # millisecond
 micros = micro * s # microsecond
@@ -256,6 +300,10 @@ hground = -me * e**4 / (32 * pi**2 * epsilon0**2 * hbar**2) # ground state hydro
 Rinfinity = me * e**4 / (64 * pi**3 * epsilon0**2 * hbar**3 * c) # Rydberg constant
 alpha = 1 / (4 * pi * epsilon0) * e**2 / (hbar * c) # fine structure constant
 
+
+# In[ ]:
+
+
 # testings
 
 assert 1 * m != 1 * kg
@@ -263,3 +311,24 @@ assert 2 * kg != 3 * kg
 assert N / C in V / m
 assert kg * c**2 in J
 assert hbar == 1.0545718176461565e-34 * kg * m**2 * s**-1
+
+
+# In[ ]:
+
+
+v, q = None, None
+
+for v, q in globals().items():
+    
+    if isinstance(q, (int, float)):
+        print("{:<18}{}".format(v, q))
+        
+    if isinstance(q, Quantity):
+        print("{:<18}{:<26}{}".format(v, q.value, str(q.unit)))
+
+
+# In[ ]:
+
+
+
+
