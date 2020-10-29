@@ -266,7 +266,7 @@ sigma = 5.670374419e-8 * W / m**2 / K**4 # Stefan-Boltzmann constant
 # more constants
 
 ms = milli * s # millisecond
-micros = micro * s # microsecond
+us = micro * s # microsecond
 ns = nano * s # nanosecond
 minute = 60 * s # minute
 hour = 60 * minute # hour
@@ -276,7 +276,7 @@ ly = c * year # light year
 
 cm = centi * m # centimeter
 mm = milli * m # millimeter
-microm = micro * m # micrometer
+um = micro * m # micrometer
 nm = nano * m # nanometer
 fm = femto * m # femtometer, fermi
 km = kilo * m # kilometer
@@ -319,16 +319,12 @@ assert hbar == 1.0545718176461565e-34 * kg * m**2 * s**-1
 v, q = None, None
 
 for v, q in globals().items():
-    
+
     if isinstance(q, (int, float)):
         print("{:<18}{}".format(v, q))
-        
+
     if isinstance(q, Quantity):
         print("{:<18}{:<26}{}".format(v, q.value, str(q.unit)))
 
 
 # In[ ]:
-
-
-
-
