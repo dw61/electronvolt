@@ -1,7 +1,5 @@
 # check for domain and range issues for trigonometry
-# trim unit printing format
 # make or .sh for version upgrade commandline automation
-# change naming convension from me to m_e, e to q_e, g, gram, ...
 
 # %% double percentage sign for hydrogen cell separation
 
@@ -270,6 +268,9 @@ assert N / C == V / m
 assert kg * c**2 in J
 assert hbar == 1.0545718176461565e-34 * kg * m**2 * s**-1
 
+#%%
+hbar
+
 # %% print constants when imported
 
 for v, q in globals().copy().items():
@@ -286,6 +287,6 @@ for v, q in globals().copy().items():
             print('\nUnits')
         elif v == 'c':
             print('\nConstants')
-        print('{:<15}{:<28}{}'.format(v, q.value, str(q.unit)))
+        print('{:<15}{:<28}{}'.format(v, q.value, repr(q.unit)))
 
 print()

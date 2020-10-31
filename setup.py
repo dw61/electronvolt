@@ -8,8 +8,8 @@
 # pip install hbar -U
 # test module at home directory
 # git commit and push
-# check on https://pypi.org/project/hbar
-# check on https://github.com/DiegoWang51/hbar
+# https://pypi.org/project/hbar
+# https://github.com/DiegoWang51/hbar
 
 import setuptools
 
@@ -18,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="hbar",
-    version="0.1.7",
+    version="0.2.0",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator with units.",
     long_description=long_description,
