@@ -1,27 +1,16 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 # check for domain and range issues for trigonometry
 # trim unit printing format
-# improve communications on defined quantity, e.g. print table of variables
-# fine tune math imports
 # make or .sh for version upgrade commandline automation
-# change naming convension from me to m_e, e to q_e, etc.
+# change naming convension from me to m_e, e to q_e, g, gram, ...
 
+# %% double percentage sign for hydrogen cell separation
 
-# In[ ]:
+from math import pi
+from math import e as euler # prevent duplicating elementary charge
+from math import sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh
 
+# %% unit converter
 
-from math import *
-
-
-# In[ ]:
-
-
-# Unit converter.
 class Unit:
 
     def __init__(self, d):
@@ -56,11 +45,8 @@ class Unit:
     def __bool__(self):
         return bool(self.d)
 
+# %% physical quantity calculator
 
-# In[ ]:
-
-
-# Physical quantity calculator.
 class Quantity:
 
     def __init__(self, value, unit):
@@ -123,11 +109,7 @@ class Quantity:
         assert not self.unit
         return float(self.value)
 
-
-# In[ ]:
-
-
-# trigonometry
+# %% trigonometry
 # https://en.wikipedia.org/wiki/Trigonometric_functions
 # https://en.wikipedia.org/wiki/Inverse_trigonometric_functions
 # https://en.wikipedia.org/wiki/Hyperbolic_functions
@@ -172,11 +154,7 @@ acsch = lambda x : asinh(1 / x)
 asech = lambda x : acosh(1 / x)
 acoth = lambda x : atanh(1 / x)
 
-
-# In[ ]:
-
-
-# SI metric prefixes
+# %% SI metric prefixes
 # https://en.wikipedia.org/wiki/Metric_prefix
 
 yotta = 1e24
@@ -201,11 +179,7 @@ atto = 1e-18
 zepto = 1e-21
 yocto = 1e-24
 
-
-# In[ ]:
-
-
-# SI units
+# %% units
 
 kg = Quantity(1, Unit({'kg' : 1}))
 m = Quantity(1, Unit({'m' : 1}))
@@ -214,12 +188,6 @@ A = Quantity(1, Unit({'A' : 1}))
 mol = Quantity(1, Unit({'mol' : 1}))
 K = Quantity(1, Unit({'K' : 1}))
 Cd = Quantity(1, Unit({'Cd' : 1}))
-
-
-# In[ ]:
-
-
-# derived units
 
 Hz = s**-1 # Hertz
 
@@ -236,11 +204,28 @@ Wb = T * m**2 # Weber
 Ohm = V / A # Ohm
 H = Ohm * s # Joseph Henry
 
+ms = milli * s # millisecond
+us = micro * s # microsecond
+ns = nano * s # nanosecond
+minute = 60 * s # minute
+hour = 60 * minute # hour
+day = 24 * hour # day
+year = 365.25 * day # year, average
 
-# In[ ]:
+dm = deci * m # decimeter
+cm = centi * m # centimeter
+mm = milli * m # millimeter
+um = micro * m # micrometer
+nm = nano * m # nanometer
+fm = femto * m # femtometer, fermi
+km = kilo * m # kilometer
 
+L = dm ** 3 # liter
+kph = km / hour # kilometer per hour
+mile = 1609.344 * m # miles
+mph = mile / hour # miles per hour
 
-# physicsal constants
+# %% Universal Constants
 # https://en.wikipedia.org/wiki/List_of_physical_constants
 
 c = 299792458 * m / s # speed of light
@@ -259,33 +244,10 @@ Da = 1.66053906660e-27 * kg # dalton, atomic mass constant
 R = NA * kB # ideal gas constant
 sigma = 5.670374419e-8 * W / m**2 / K**4 # Stefan-Boltzmann constant
 
+# %% more constants
 
-# In[ ]:
-
-
-# more constants
-
-ms = milli * s # millisecond
-us = micro * s # microsecond
-ns = nano * s # nanosecond
-minute = 60 * s # minute
-hour = 60 * minute # hour
-day = 24 * hour # day
-year = 365.25 * day # year, average
 ly = c * year # light year
-
-cm = centi * m # centimeter
-mm = milli * m # millimeter
-um = micro * m # micrometer
-nm = nano * m # nanometer
-fm = femto * m # femtometer, fermi
-km = kilo * m # kilometer
-
-kph = km / hour # kilometer per hour
-mile = 1609.344 * m # miles
-mph = mile / hour # miles per hour
-
-gacceleration = 9.80665 * m / s**2 # gravitational acceleration
+g = 9.80665 * m / s**2 # gravitational acceleration
 gram = kg / kilo # gram
 k = 1 / (4 * pi * epsilon0) # Coulomb constant
 eV = e * V # electronvolt
@@ -296,35 +258,34 @@ TeV = tera * eV # tetra electronvolt
 MeVpc2 = MeV / c**2 # mega electronvolt per c squared
 
 a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
-hground = -me * e**4 / (32 * pi**2 * epsilon0**2 * hbar**2) # ground state hydrogen energy level
-Rinfinity = me * e**4 / (64 * pi**3 * epsilon0**2 * hbar**3 * c) # Rydberg constant
+hground = - me * e**4 / (32 * pi**2 * epsilon0**2 * hbar**2) # ground state hydrogen energy level
+Rinfty = me * e**4 / (64 * pi**3 * epsilon0**2 * hbar**3 * c) # Rydberg constant
 alpha = 1 / (4 * pi * epsilon0) * e**2 / (hbar * c) # fine structure constant
 
-
-# In[ ]:
-
-
-# testings
+# %% testings
 
 assert 1 * m != 1 * kg
 assert 2 * kg != 3 * kg
-assert N / C in V / m
+assert N / C == V / m
 assert kg * c**2 in J
 assert hbar == 1.0545718176461565e-34 * kg * m**2 * s**-1
 
+# %% print constants when imported
 
-# In[ ]:
-
-
-v, q = None, None
-
-for v, q in globals().items():
+for v, q in globals().copy().items():
 
     if isinstance(q, (int, float)):
-        print("{:<18}{}".format(v, q))
+        if v == 'pi':
+            print('\nMath Constants')
+        elif v == 'yotta':
+            print('\nSI Metric Prefixes')
+        print('{:<15}{}'.format(v, q))
 
     if isinstance(q, Quantity):
-        print("{:<18}{:<26}{}".format(v, q.value, str(q.unit)))
+        if v == 'kg':
+            print('\nUnits')
+        elif v == 'c':
+            print('\nConstants')
+        print('{:<15}{:<28}{}'.format(v, q.value, str(q.unit)))
 
-
-# In[ ]:
+print()

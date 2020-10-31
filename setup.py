@@ -1,12 +1,10 @@
 # git pull
-# jupyter nbconvert --clear-output --inplace hbar.ipynb
-# jupyter nbconvert --to script hbar.ipynb
-# test hbar.py
+# test hbar.py using command I
 # update README.md
 # update version number in setuptools.setup
 # python setup.py sdist bdist_wheel
 # twine upload dist/*
-# rm -r build dist *.egg-info .ipynb_checkpoints
+# rm -r build dist *.egg-info
 # pip install hbar -U
 # test module at home directory
 # git commit and push
@@ -20,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="hbar",
-    version="0.1.4",
+    version="0.1.7",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator with units.",
     long_description=long_description,
