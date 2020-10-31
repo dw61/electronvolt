@@ -33,8 +33,10 @@ Use this module in an interactive python environment, such as jupyter notebook, 
 
 Here are a list of units and constants that this module currently supports. A constant table will also be (barbarically) provided when importing this module. If you believe this module would better not print anything at import, please let me know.
 
-| Math Constants     |                              |                                     |
+| Variable Name      | Value                        | Unit                                |
 |--------------------|------------------------------|-------------------------------------|
+|                    |                              |                                     |
+| Math Constants     |                              |                                     |
 | pi                 | 3.141592653589790            |                                     |
 | euler              | 2.718281828459050            |                                     |
 |                    |                              |                                     |
