@@ -31,7 +31,7 @@ Use this module in an interactive python environment, such as jupyter notebook, 
 
 ## Units and Constants
 
-Here are a list of units and constants that this module currently supports. A constant table will also be (barbarically) provided when importing this module. If you believe this module would better not print anything at import, please let me know. <br><br>
+Here are a list of units and constants that this module currently supports. A constant table will also be (barbarically) provided when importing this module. If you believe this module would better not print anything at import, please let me know.
 
 | Math Constants     |                              |                                     |
 |--------------------|------------------------------|-------------------------------------|
