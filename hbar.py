@@ -1,6 +1,9 @@
+# .sh for version upgrade commandline automation
 # domain and range issues for trigonometry
 # automatic unit detection
-# .sh for version upgrade commandline automation
+# explanations at the print table
+# print at 6 significant figures?
+# essense? 137?
 
 # %% double percentage sign for hydrogen cell separation
 
@@ -267,6 +270,11 @@ a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
 hground = - me * e**4 / (32 * pi**2 * epsilon0**2 * hbar**2) # ground state hydrogen energy level
 Rinfty = me * e**4 / (64 * pi**3 * epsilon0**2 * hbar**3 * c) # Rydberg constant
 alpha = 1 / (4 * pi * epsilon0) * e**2 / (hbar * c) # fine structure constant
+
+Bq = s**-1 # Becquerel
+Ci = 3.7e10 * Bq # Curie, radioactive decay
+mCi = milli * Ci # millicurie
+uCi = micro * Ci # microcurie
 
 # %% testings
 
