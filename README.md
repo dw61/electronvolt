@@ -115,6 +115,7 @@ Here are a list of units and constants that this module currently supports. A co
 | mp                 | 1.67262192369E-27            | kg                                  |
 | mn                 | 1.67492749804E-27            | kg                                  |
 | Da                 | 1.6605390666E-27             | kg                                  |
+| u                  | 1.6605390666E-27             | kg                                  |
 | R                  | 8.31446261815324             | m\*\*2 \* K\*\*-1 \* mol\*\*-1 \* kg \* s\*\*-2 |
 | sigma              | 5.670374419E-08              | kg \* s\*\*-3 \* K\*\*-4                  |
 | ly                 | 9460730472580800.0           | m                                   |

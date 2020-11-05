@@ -239,6 +239,7 @@ me = 9.1093837015e-31 * kg # electron mass
 mp = 1.67262192369e-27 * kg # proton mass
 mn = 1.67492749804e-27 * kg # neutron mass
 Da = 1.66053906660e-27 * kg # dalton, atomic mass constant
+u = Da # atomic mass unit, 1/12 mass of carbon 12
 R = NA * kB # ideal gas constant
 sigma = 5.670374419e-8 * W / m**2 / K**4 # Stefan-Boltzmann constant
 
