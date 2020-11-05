@@ -1,11 +1,12 @@
-# check for domain and range issues for trigonometry
-# make or .sh for version upgrade commandline automation
+# domain and range issues for trigonometry
+# automatic unit detection
+# .sh for version upgrade commandline automation
 
 # %% double percentage sign for hydrogen cell separation
 
 from math import pi
 from math import e as euler # prevent duplicating elementary charge
-from math import sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh
+from math import sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh, exp, log
 
 # %% unit converter
 
@@ -94,8 +95,12 @@ class Quantity:
     def __rtruediv__(self, other):
         return (self / other) ** -1
 
-    def __pow__(self, p):
-        return Quantity(self.value ** p, self.unit ** p)
+    def __pow__(self, exponent):
+        return Quantity(self.value ** exponent, self.unit ** exponent)
+
+    def __rpow__(self, base): # handles euler ** (1*s/s)
+        assert not self.unit
+        return base ** self.value
 
     def __contains__(self, other):
         return self.unit == other.unit # sloppy. not doing .convert()
@@ -208,6 +213,7 @@ ns = nano * s # nanosecond
 minute = 60 * s # minute
 hour = 60 * minute # hour
 day = 24 * hour # day
+week = 7 * day # week
 year = 365.25 * day # year, average
 
 dm = deci * m # decimeter
@@ -238,8 +244,9 @@ kB = 1.380649e-23 * J / K # Boltzmann constant
 me = 9.1093837015e-31 * kg # electron mass
 mp = 1.67262192369e-27 * kg # proton mass
 mn = 1.67492749804e-27 * kg # neutron mass
-Da = 1.66053906660e-27 * kg # dalton, atomic mass constant
-u = Da # atomic mass unit, 1/12 mass of carbon 12
+u = 1.66053906660e-27 * kg # atomic mass unit, 1/12 atomic mass of carbon 12, Da
+mH = 1.007825 * u # atomic mass of Hydrogen
+mHe = 4.002602 * u # atomic mass of Helium
 R = NA * kB # ideal gas constant
 sigma = 5.670374419e-8 * W / m**2 / K**4 # Stefan-Boltzmann constant
 
@@ -269,10 +276,7 @@ assert N / C == V / m
 assert kg * c**2 in J
 assert hbar == 1.0545718176461565e-34 * kg * m**2 * s**-1
 
-#%%
-hbar
-
-# %% print constants when imported
+# %% print constants at import
 
 for v, q in globals().copy().items():
 

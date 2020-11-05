@@ -6,7 +6,7 @@
 # twine upload dist/*
 # rm -r build dist *.egg-info
 # pip install hbar -U
-# test module at home directory
+# test module in nteract
 # git commit and push
 # https://pypi.org/project/hbar
 # https://github.com/DiegoWang51/hbar
@@ -18,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="hbar",
-    version="0.2.2",
+    version="0.2.3",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator with units.",
     long_description=long_description,
