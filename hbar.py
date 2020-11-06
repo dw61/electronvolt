@@ -3,7 +3,7 @@
 # automatic unit detection
 # explanations at the print table
 # print at 6 significant figures?
-# essense? 137?
+# essense? 137? 
 
 # %% double percentage sign for hydrogen cell separation
 
