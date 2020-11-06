@@ -27,9 +27,9 @@ This matches the rest mass energy of electron from [Wikipedia](https://en.wikipe
 
 Install this module using pip via `pip install hbar`.
 
-Use this module in an interactive python environment, such as jupyter notebook, via `from hbar import *`, for best using experience.
+Use this module in an interactive python environment, such as jupyter notebook, via `from hbar import *`, for best experience.
 
-If you need an interactive python environment, try [mybinder.org](https://mybinder.org/v2/gh/DiegoWang51/hbar/HEAD?filepath=others%2Fcalculator.ipynb). This page usually loads within 2 minutes.
+You can also run this module [here](https://mybinder.org/v2/gh/DiegoWang51/hbar/HEAD?filepath=others%2Fcalculator.ipynb). Use shift+enter to execute a block of code. This page usually loads in 3 minutes.
 
 ## Units and Constants
 
