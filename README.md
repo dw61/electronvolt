@@ -29,7 +29,7 @@ Install this module using pip via `pip install hbar`.
 
 Use this module in an interactive python environment, such as jupyter notebook, via `from hbar import *`, for best experience.
 
-You can also run this module here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DiegoWang51/hbar/HEAD?filepath=others%2Fcalculator.ipynb). Use shift+enter to execute a block of code. Execute the first block of code upon entry to initialize the calculator. This page typically loads in 3 minutes.
+You can also run this module [here](https://mybinder.org/v2/gh/DiegoWang51/hbar/HEAD?filepath=others%2Fcalculator.ipynb). Use shift+enter to execute a block of code. Execute the first block of code upon entry to initialize the calculator. This page typically loads in 3 minutes.
 
 ## Units and Constants
 
