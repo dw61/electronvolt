@@ -9,7 +9,7 @@
 # test module in nteract
 # git commit and push
 # https://pypi.org/project/hbar
-# https://github.com/DiegoWang51/hbar
+# https://github.com/dw61/hbar
 
 import setuptools
 
