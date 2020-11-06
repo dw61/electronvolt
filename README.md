@@ -29,6 +29,8 @@ Install this module using pip via `pip install hbar`.
 
 Use this module in an interactive python environment, such as jupyter notebook, via `from hbar import *`, for best using experience.
 
+If you need an interactive python environment, try [mybinder.org](https://mybinder.org/v2/gh/DiegoWang51/hbar/HEAD?filepath=others%2Fcalculator.ipynb). This page usually loads within 2 minutes.
+
 ## Units and Constants
 
 Here are a list of units and constants that this module currently supports. A constant table will also be (barbarically) provided when importing this module. If you believe this module would better not print anything at import, please let me know.
