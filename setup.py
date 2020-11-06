@@ -23,7 +23,7 @@ setuptools.setup(
     description="A physical quantity calculator with units.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/DiegoWang51/hbar",
+    url="https://github.com/dw61/hbar",
     py_modules=["hbar"],
     python_requires='>=3.6',
 )
