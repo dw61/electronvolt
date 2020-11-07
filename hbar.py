@@ -3,13 +3,13 @@
 # automatic unit detection
 # explanations at the print table
 # print at 6 significant figures?
-# essense? 137? 
+# essense? 137?
 
 # %% double percentage sign for hydrogen cell separation
 
 from math import pi
 from math import e as euler # prevent duplicating elementary charge
-from math import sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh, exp, log
+from math import sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh, degrees, radians, exp, log
 
 # %% unit converter
 
