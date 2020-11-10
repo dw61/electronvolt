@@ -3,7 +3,9 @@
 # automatic unit detection
 # explanations at the print table
 # print at 6 significant figures?
-# essense? 137?
+# work with ufloat, maybe unit outside it?
+# essense? 137? change name of module to be not a variable in case importing twice
+# not printing at import?
 
 # %% double percentage sign for hydrogen cell separation
 
