@@ -3,7 +3,7 @@
 # update README.md
 # update version number in setuptools.setup
 # python setup.py sdist bdist_wheel
-# twine upload dist/*
+# twine upload dist/* -u diego51
 # rm -r build dist *.egg-info
 # pip install hbar -U
 # test module in nteract
@@ -18,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="hbar",
-    version="0.2.8",
+    version="0.2.9",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator with units.",
     long_description=long_description,
