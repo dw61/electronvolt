@@ -59,7 +59,7 @@ class Quantity:
         self.unit = unit
 
     def __repr__(self):
-        return '{0} {1}'.format(self.value, repr(self.unit))
+        return '{0} * {1}'.format(self.value, repr(self.unit))
 
     def __eq__(self, other):
         return self.value == other.value and self.unit == other.unit
