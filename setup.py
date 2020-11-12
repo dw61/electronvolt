@@ -18,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="hbar",
-    version="0.2.6",
+    version="0.2.7",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator with units.",
     long_description=long_description,

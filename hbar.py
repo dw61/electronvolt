@@ -6,6 +6,7 @@
 # work with ufloat, maybe unit outside it?
 # essense? 137? change name of module to be not a variable in case importing twice
 # not printing at import?
+# printing with latex support in notebook? like sympy matrix?
 
 # %% double percentage sign for hydrogen cell separation
 
@@ -306,3 +307,5 @@ for v, q in globals().copy().items():
         print('{:<15}{:<28}{}'.format(v, q.value, repr(q.unit)))
 
 print()
+
+# %% new cell
