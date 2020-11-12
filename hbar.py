@@ -7,6 +7,7 @@
 # essense? 137? change name of module to be not a variable in case importing twice
 # not printing at import?
 # printing with latex support in notebook? like sympy matrix?
+# order and interchangeability of units and constants
 
 # %% double percentage sign for hydrogen cell separation
 
@@ -60,7 +61,9 @@ class Quantity:
         self.unit = unit
 
     def __repr__(self):
-        return '{0} * {1}'.format(self.value, repr(self.unit))
+        if not self.unit:
+            return repr(self.value)
+        return '{0} {1}'.format(self.value, repr(self.unit))
 
     def __eq__(self, other):
         return self.value == other.value and self.unit == other.unit
@@ -235,6 +238,7 @@ L = dm ** 3 # liter
 kph = km / hour # kilometer per hour
 mile = 1609.344 * m # miles
 mph = mile / hour # miles per hour
+kWh = kilo * W * hour # kilowatt-hour
 
 # %% Universal Constants
 # https://en.wikipedia.org/wiki/List_of_physical_constants
