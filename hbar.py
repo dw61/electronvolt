@@ -3,19 +3,21 @@
 # domain and range issues for trigonometry
 # automatic unit detection
 # explanations at the print table
-# print at 6 significant figures?
+# print at 6 significant figures, only for table?
 # work with ufloat, maybe unit outside it?
 # essense? 137? change name of module to be not a variable in case importing twice
 # not printing at import?
 # printing with latex support in notebook? like sympy matrix?
 # order and interchangeability of units and constants
+# internalize Unit into Quantity? Then table print is changed.
+# table reorder and more segmentation, e.g. universal, daily life, SI, classical mechanics, electromagnetism
 
 # %% double percentage sign for hydrogen cell separation
 
 from math import pi
 from math import e as euler # prevent duplicating elementary charge
-from math import sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh, degrees, radians, exp
 from math import log as ln # log defaults to ln
+from math import exp, sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh, degrees, radians
 
 # %% unit converter
 
