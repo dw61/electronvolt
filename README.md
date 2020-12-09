@@ -34,13 +34,11 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 
 Install this module using pip via `pip install electronvolt`.
 
-Use this module in an interactive python environment, such as jupyter notebook, via `from electronvolt import *`, for best experience.
+For best experience, use in an interactive python environment, e.g. jupyter notebook, and import using `from electronvolt import *`.
 
-You can also run this module online [here](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb). This page typically loads in 3 minutes. Upon entry, use shift+enter to run a block of code. Run the first block to initialize the calculator. Run the second block to feel how it works.
+Alternatively, run this module online [HERE](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb). This page typically loads in 3 minutes. Use shift+enter to run a block of code. Run the first block to initialize the calculator. Run the second block to feel how it works.
 
 ## Units and Constants
-
-Here are a list of units and constants that this module currently supports. A constant table will also be (barbarically) provided when importing this module. If you believe this module would better not print anything at import, please let me know.
 
 | Variable Name      | Value                        | Unit                                |
 |--------------------|------------------------------|-------------------------------------|
