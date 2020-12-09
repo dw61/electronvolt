@@ -1,27 +1,34 @@
 ## Demo
 
-#### Calculate the rest mass energy of an electron.
+#### Rest mass of an electron
+
+```
+>>> me
+9.1093837015e-31 kg
+```
+
+#### Speed of light
+
+```
+>>> c
+299792458.0 m * s**-1
+```
+
+#### Rest energy of an electron
 
 ```
 >>> me * c**2
 8.187105776823886e-14 m**2 * s**-2 * kg
 ```
 
-#### Check that the energy is in Joules.
-
-```
->>> me * c**2 in J # sloppy use of __contains__
-True
-```
-
-#### Convert joules to mega electronvolts if you like.
+#### In mega electronvolts
 
 ```
 >>> me * c**2 / MeV
 0.5109989499961642
 ```
 
-This matches the rest mass energy of electron from [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
+This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
 
 ## Usage
 
