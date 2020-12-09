@@ -1,5 +1,5 @@
 # git pull
-# test hbar.py using command I
+# test electronvolt.py using command I
 # update README.md
 # update version number in setuptools.setup
 # python setup.py sdist bdist_wheel
@@ -18,12 +18,12 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="0.0.1",
+    version="0.0.2",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/dw61/hbar",
-    py_modules=["hbar"],
+    py_modules=["electronvolt"],
     python_requires='>=3.6',
 )
