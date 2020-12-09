@@ -3,14 +3,15 @@
 # domain and range issues for trigonometry
 # automatic unit detection
 # explanations at the print table
-# print at 6 significant figures, only for table?
+# print at 6 significant figures, only for table, but repr gives accurate value
 # work with ufloat, maybe unit outside it?
 # essense? 137? change name of module to be not a variable in case importing twice
 # not printing at import?
 # printing with latex support in notebook? like sympy matrix?
 # order and interchangeability of units and constants
-# internalize Unit into Quantity? Then table print is changed.
 # table reorder and more segmentation, e.g. universal, daily life, SI, classical mechanics, electromagnetism
+# cancel the in keyword, or not
+# big button HERE
 
 # %% double percentage sign for hydrogen cell separation
 
@@ -195,53 +196,55 @@ atto = 1e-18
 zepto = 1e-21
 yocto = 1e-24
 
-# %% units
+# %% defining units
 
-kg = Quantity(1, Unit({'kg' : 1}))
-m = Quantity(1, Unit({'m' : 1}))
 s = Quantity(1, Unit({'s' : 1}))
+m = Quantity(1, Unit({'m' : 1}))
+kg = Quantity(1, Unit({'kg' : 1}))
 A = Quantity(1, Unit({'A' : 1}))
-mol = Quantity(1, Unit({'mol' : 1}))
 K = Quantity(1, Unit({'K' : 1}))
-Cd = Quantity(1, Unit({'Cd' : 1}))
+mol = Quantity(1, Unit({'mol' : 1}))
+cd = Quantity(1, Unit({'Cd' : 1}))
 
+minute = 60 * s
+hour = 60 * minute
+day = 24 * hour
+week = 7 * day
+year = 365.25 * day # average year
+ms = milli * s
+us = micro * s # microsecond
+ns = nano * s
 Hz = s**-1 # Hertz
 
+km = kilo * m
+dm = deci * m
+cm = centi * m
+mm = milli * m
+um = micro * m # micrometer
+nm = nano * m
+fm = femto * m # fermi
+L = dm**3 # liter
+
+mile = 1609.344 * m # miles
+kph = km / hour # kilometer per hour
+mph = mile / hour # miles per hour
+g = 9.80665 * m / s**2 # gravitational acceleration
+
+gram = kg / kilo # gram
+
 N = kg * m / s**2 # Newton
-Pa = N / m**2 # Pascal
 J = N * m # Joule
 W = J / s # Watt
+kWh = kilo * W * hour # kilowatt-hour
+Pa = N / m**2 # Pascal
 
 C = A * s # Coulomb
 V = J / C # Voltage
+Ohm = V / A # Ohm
 F = C / V # Farad
 T = V * s / m**2 # Tesla
 Wb = T * m**2 # Weber
-Ohm = V / A # Ohm
 H = Ohm * s # Joseph Henry
-
-ms = milli * s # millisecond
-us = micro * s # microsecond
-ns = nano * s # nanosecond
-minute = 60 * s # minute
-hour = 60 * minute # hour
-day = 24 * hour # day
-week = 7 * day # week
-year = 365.25 * day # year, average
-
-dm = deci * m # decimeter
-cm = centi * m # centimeter
-mm = milli * m # millimeter
-um = micro * m # micrometer
-nm = nano * m # nanometer
-fm = femto * m # femtometer, fermi
-km = kilo * m # kilometer
-
-L = dm ** 3 # liter
-kph = km / hour # kilometer per hour
-mile = 1609.344 * m # miles
-mph = mile / hour # miles per hour
-kWh = kilo * W * hour # kilowatt-hour
 
 # %% Universal Constants
 # https://en.wikipedia.org/wiki/List_of_physical_constants
@@ -258,29 +261,38 @@ kB = 1.380649e-23 * J / K # Boltzmann constant
 me = 9.1093837015e-31 * kg # electron mass
 mp = 1.67262192369e-27 * kg # proton mass
 mn = 1.67492749804e-27 * kg # neutron mass
-u = 1.66053906660e-27 * kg # atomic mass unit, 1/12 atomic mass of carbon 12, Da
+u = 1.66053906660e-27 * kg # atomic mass unit, 1/12 atomic mass of carbon 12
 mH = 1.007825 * u # atomic mass of Hydrogen
 mHe = 4.002602 * u # atomic mass of Helium
+a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
+alpha = e**2 / (4 * pi * epsilon0 * hbar * c) # fine structure constant
+Rinfty = alpha**2 * me * c / (2 * h) # Rydberg constant
 R = NA * kB # ideal gas constant
-sigma = 5.670374419e-8 * W / m**2 / K**4 # Stefan-Boltzmann constant
+sigma = pi**2 * kB**4 / (60 * hbar**3 * c**2) # Stefan-Boltzmann constant
 
 # %% more constants
 
 ly = c * year # light year
-g = 9.80665 * m / s**2 # gravitational acceleration
-gram = kg / kilo # gram
+au = 149597870700 * m # astronomical unit
+pc = au / radians(1/3600) # parsec
+Mpc = mega * pc # megaparsec
+H0 = 72 * km/s / Mpc # Hubble parameter
+
 k = 1 / (4 * pi * epsilon0) # Coulomb constant
+
 eV = e * V # electronvolt
 keV = kilo * eV # kilo electronvolt
 MeV = mega * eV # mega electronvolt
 GeV = giga * eV # giga electronvolt
 TeV = tera * eV # tetra electronvolt
-MeVpc2 = MeV / c**2 # mega electronvolt per c squared
 
-a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
-hground = - me * e**4 / (32 * pi**2 * epsilon0**2 * hbar**2) # ground state hydrogen energy level
-Rinfty = me * e**4 / (64 * pi**3 * epsilon0**2 * hbar**3 * c) # Rydberg constant
-alpha = 1 / (4 * pi * epsilon0) * e**2 / (hbar * c) # fine structure constant
+eVpc = eV / c # electronvolt per speed of light
+MeVpc = mega * eVpc # mega electronvolt per speed of light
+
+eVpc2 = eV / c**2 # electronvolt per speed of light squared
+MeVpc2 = mega * eVpc2 # mega electronvolt per speed of light squared
+
+hground = - me * e**4 / (8 * h**2 * epsilon0**2) # hydrogen ground state energy
 
 Bq = s**-1 # Becquerel
 Ci = 3.7e10 * Bq # Curie, radioactive decay
@@ -290,29 +302,32 @@ uCi = micro * Ci # microcurie
 # %% testings
 
 assert 1 * m != 1 * kg
-assert 2 * kg != 3 * kg
+assert 2 * kg + 2 * kg != 5 * kg
 assert N / C == V / m
-assert kg * c**2 in J
-assert hbar == 1.0545718176461565e-34 * kg * m**2 * s**-1
+assert hground == - 13.605693122884658 * eV
 
-# %% print constants at import
+# %% print constant table at import
+
+table = ''
 
 for v, q in globals().copy().items():
 
     if isinstance(q, (int, float)):
         if v == 'pi':
-            print('\nMath Constants')
+            table += '\nMath Constants\n'
         elif v == 'yotta':
-            print('\nSI Metric Prefixes')
-        print('{:<15}{}'.format(v, q))
+            table += '\nSI Metric Prefixes\n'
+        table += '{:<15}{:.9g}\n'.format(v, q)
 
     if isinstance(q, Quantity):
-        if v == 'kg':
-            print('\nUnits')
+        if v == 's':
+            table += '\nUnits\n'
         elif v == 'c':
-            print('\nConstants')
-        print('{:<15}{:<28}{}'.format(v, q.value, repr(q.unit)))
+            table += '\nUniversal Constants\n'
+        elif v == 'ly':
+            table += '\nMore Constants\n'
+        table += '{:<15}{:<28.9g}{}\n'.format(v, q.value, repr(q.unit))
 
-print()
+print(table)
 
 # %% new cell
