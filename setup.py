@@ -9,7 +9,7 @@
 # test module in nteract
 # git commit and push
 # https://pypi.org/project/electronvolt
-# https://github.com/dw61/hbar
+# https://github.com/dw61/electronvolt
 
 import setuptools
 
@@ -23,7 +23,7 @@ setuptools.setup(
     description="A physical quantity calculator.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/dw61/hbar",
+    url="https://github.com/dw61/electronvolt",
     py_modules=["electronvolt"],
     python_requires='>=3.6',
 )
