@@ -36,7 +36,7 @@ Install this module using pip via `pip install electronvolt`.
 
 For best experience, use in an interactive python environment, e.g. jupyter notebook, and import using `from electronvolt import *`.
 
-Alternatively, run this module online [HERE](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb). This page typically loads in 3 minutes. Use shift+enter to run a block of code. Run the first block to initialize the calculator. Run the second block to feel how it works.
+Alternatively, run this module online [**HERE**](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb). This page typically loads in 3 minutes. Use shift+enter to run a block of code. Run the first block to initialize the calculator. Run the second block to feel how it works.
 
 ## Units and Constants
 

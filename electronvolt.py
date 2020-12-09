@@ -1,16 +1,11 @@
 # .sh or make for version upgrade commandline automation
 # token
 # domain and range issues for trigonometry
-# automatic unit detection
 # explanations at the print table
-# print at 6 significant figures, only for table, but repr gives accurate value
 # work with ufloat, maybe unit outside it?
-# not printing at import?
 # printing with latex support in notebook? like sympy matrix?
-# order and interchangeability of units and constants
+# https://en.wikipedia.org/wiki/SI_derived_unit
 # table reorder and more segmentation, e.g. universal, daily life, SI, classical mechanics, electromagnetism
-# cancel the in keyword, or not
-# big button HERE
 
 # %% double percentage sign for hydrogen cell separation
 
@@ -195,7 +190,7 @@ atto = 1e-18
 zepto = 1e-21
 yocto = 1e-24
 
-# %% defining units
+# %% defining SI units
 
 s = Quantity(1, Unit({'s' : 1}))
 m = Quantity(1, Unit({'m' : 1}))
@@ -204,6 +199,8 @@ A = Quantity(1, Unit({'A' : 1}))
 K = Quantity(1, Unit({'K' : 1}))
 mol = Quantity(1, Unit({'mol' : 1}))
 cd = Quantity(1, Unit({'Cd' : 1}))
+
+# %% derived units
 
 minute = 60 * s
 hour = 60 * minute
@@ -320,7 +317,9 @@ for v, q in globals().copy().items():
 
     if isinstance(q, Quantity):
         if v == 's':
-            table += '\nUnits\n'
+            table += '\nSI Units\n'
+        elif v == 'minute':
+            table += '\nDerived Units\n'
         elif v == 'c':
             table += '\nUniversal Constants\n'
         elif v == 'ly':

@@ -18,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="0.0.4",
+    version="0.0.5",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator.",
     long_description=long_description,
