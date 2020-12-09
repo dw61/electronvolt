@@ -5,10 +5,10 @@
 # python setup.py sdist bdist_wheel
 # twine upload dist/* -u diego51
 # rm -r build dist *.egg-info
-# pip install hbar -U
+# pip install electronvolt -U
 # test module in nteract
 # git commit and push
-# https://pypi.org/project/hbar
+# https://pypi.org/project/electronvolt
 # https://github.com/dw61/hbar
 
 import setuptools
@@ -17,10 +17,10 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setuptools.setup(
-    name="hbar",
-    version="0.3.2",
+    name="electronvolt",
+    version="0.0.1",
     author_email="lw7jz@virginia.edu",
-    description="A physical quantity calculator with units.",
+    description="A physical quantity calculator.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/dw61/hbar",
