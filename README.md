@@ -34,7 +34,7 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 
 * Install this module via `pip install electronvolt`.
 * Recommended to use in an interactive python environment, e.g. jupyter notebook.
-* Recommended to import using `from electronvolt import *`.
+* Recommended to import via `from electronvolt import *`.
 
 #### Alternatively, run this module online [**HERE**](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb).
 
@@ -80,7 +80,7 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | A                         | 1            | A                                                  |
 | K                         | 1            | K                                                  |
 | mol                       | 1            | mol                                                |
-| cd                        | 1            | Cd                                                 |
+| cd                        | 1            | cd                                                 |
 |                           |              |                                                    |
 | **Time**                  |              |                                                    |
 | minute                    | 60           | s                                                  |

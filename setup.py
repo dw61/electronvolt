@@ -7,8 +7,8 @@
 # pip install electronvolt -U
 # test module in nteract
 # git commit and push
-# https://pypi.org/project/electronvolt
-# https://github.com/dw61/electronvolt
+# pypi.org/project/electronvolt
+# github.com/dw61/electronvolt
 
 import setuptools
 
@@ -17,7 +17,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="0.1.1",
+    version="0.1.2",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator.",
     long_description=long_description,

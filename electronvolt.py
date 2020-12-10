@@ -58,6 +58,18 @@ class Quantity:
     def __eq__(self, other):
         return self.value == other.value and self.unit == other.unit
 
+    def __lt__(self, other):
+        return self.value < other.value and self.unit == other.unit
+
+    def __gt__(self, other):
+        return self.value > other.value and self.unit == other.unit
+
+    def __le__(self, other):
+        return self.value <= other.value and self.unit == other.unit
+
+    def __gt__(self, other):
+        return self.value >= other.value and self.unit == other.unit
+
     def __add__(self, other):
         if isinstance(other, (int, float)): # handles 1*kg/kg + 1
             return self + Quantity(other, Unit({})) # implicit-ish recursion
@@ -185,7 +197,7 @@ kg = Quantity(1, Unit({'kg' : 1}))
 A = Quantity(1, Unit({'A' : 1}))
 K = Quantity(1, Unit({'K' : 1}))
 mol = Quantity(1, Unit({'mol' : 1}))
-cd = Quantity(1, Unit({'Cd' : 1}))
+cd = Quantity(1, Unit({'cd' : 1}))
 
 minute = 60 * s
 hour = 60 * minute
@@ -275,10 +287,11 @@ H0 = 72 * km/s / Mpc # Hubble parameter
 
 # %% testings
 
-assert 1 * m != 1 * kg
-assert 2 * kg + 2 * kg != 5 * kg
+assert 1 * m != 1 * s
+assert 2 * kg + 2 * kg < 5 * kg
 assert N / C == V / m
-assert hground == - 13.605693122884658 * eV
+assert kg * c**2 in J
+assert pc > ly
 
 # %% print constant table at import
 
