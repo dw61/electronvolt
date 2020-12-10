@@ -4,8 +4,8 @@
 # explanations at the print table
 # work with ufloat, maybe unit outside it?
 # printing with latex support in notebook? like sympy matrix?
-# https://en.wikipedia.org/wiki/SI_derived_unit
-# table reorder and more segmentation, e.g. universal, daily life, SI, classical mechanics, electromagnetism
+# https://en.wikipedia.org/wiki/Branches_of_physics#Relativistic_mechanics
+# map of physics
 
 # %% double percentage sign for hydrogen cell separation
 
@@ -121,10 +121,6 @@ class Quantity:
         return float(self.value)
 
 # %% trigonometry
-# https://en.wikipedia.org/wiki/Trigonometric_functions
-# https://en.wikipedia.org/wiki/Inverse_trigonometric_functions
-# https://en.wikipedia.org/wiki/Hyperbolic_functions
-# https://en.wikipedia.org/wiki/Inverse_hyperbolic_functions
 
 # sin, provided by math, input in radians
 # cos
@@ -166,7 +162,6 @@ asech = lambda x : acosh(1 / x)
 acoth = lambda x : atanh(1 / x)
 
 # %% SI metric prefixes
-# https://en.wikipedia.org/wiki/Metric_prefix
 
 yotta = 1e24
 zetta = 1e21
@@ -190,7 +185,7 @@ atto = 1e-18
 zepto = 1e-21
 yocto = 1e-24
 
-# %% defining SI units
+# %% units and constants
 
 s = Quantity(1, Unit({'s' : 1}))
 m = Quantity(1, Unit({'m' : 1}))
@@ -200,7 +195,24 @@ K = Quantity(1, Unit({'K' : 1}))
 mol = Quantity(1, Unit({'mol' : 1}))
 cd = Quantity(1, Unit({'Cd' : 1}))
 
-# %% derived units
+g = 9.80665 * m / s**2 # gravitational acceleration
+N = kg * m / s**2 # Newton
+Pa = N / m**2 # Pascal
+J = N * m # Joule
+W = J / s # Watt
+
+C = A * s # Coulomb
+V = J / C # Voltage
+F = C / V # Farad
+Ohm = V / A # Ohm
+T = V * s / m**2 # Tesla
+Wb = T * m**2 # Weber
+H = Ohm * s # Joseph Henry
+c = 299792458 * m / s # speed of light
+mu0 = 1.25663706212e-6 * H / m # vacuum magnetic permeability
+epsilon0 = 1 / (mu0 * c**2) # vacuum electric permittivity
+k = 1 / (4 * pi * epsilon0) # Coulomb constant
+e = 1.602176634e-19 * C # elementary charge
 
 minute = 60 * s
 hour = 60 * minute
@@ -219,41 +231,22 @@ mm = milli * m
 um = micro * m # micrometer
 nm = nano * m
 fm = femto * m # fermi
-L = dm**3 # liter
 
 mile = 1609.344 * m # miles
 kph = km / hour # kilometer per hour
 mph = mile / hour # miles per hour
-g = 9.80665 * m / s**2 # gravitational acceleration
 
 gram = kg / kilo # gram
-
-N = kg * m / s**2 # Newton
-J = N * m # Joule
-W = J / s # Watt
+L = dm**3 # liter
 kWh = kilo * W * hour # kilowatt-hour
-Pa = N / m**2 # Pascal
 
-C = A * s # Coulomb
-V = J / C # Voltage
-Ohm = V / A # Ohm
-F = C / V # Farad
-T = V * s / m**2 # Tesla
-Wb = T * m**2 # Weber
-H = Ohm * s # Joseph Henry
-
-# %% Universal Constants
-# https://en.wikipedia.org/wiki/List_of_physical_constants
-
-c = 299792458 * m / s # speed of light
 h = 6.62607015e-34 * J * s # Planck constant
 hbar = h / (2 * pi) # reduced Planck constant
-G = 6.67430e-11 * m**3 * kg**-1 * s**-2 # Newtonian constant of gravitation
-mu0 = 1.25663706212e-6 * H / m # vacuum magnetic permeability
-epsilon0 = 1 / (mu0 * c**2) # vacuum electric permittivity
-e = 1.602176634e-19 * C # elementary charge
 NA = 6.02214076e23 * mol**-1 # Avogadro constant
 kB = 1.380649e-23 * J / K # Boltzmann constant
+R = NA * kB # ideal gas constant
+sigma = pi**2 * kB**4 / (60 * hbar**3 * c**2) # Stefan-Boltzmann constant
+
 me = 9.1093837015e-31 * kg # electron mass
 mp = 1.67262192369e-27 * kg # proton mass
 mn = 1.67492749804e-27 * kg # neutron mass
@@ -263,37 +256,29 @@ mHe = 4.002602 * u # atomic mass of Helium
 a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
 alpha = e**2 / (4 * pi * epsilon0 * hbar * c) # fine structure constant
 Rinfty = alpha**2 * me * c / (2 * h) # Rydberg constant
-R = NA * kB # ideal gas constant
-sigma = pi**2 * kB**4 / (60 * hbar**3 * c**2) # Stefan-Boltzmann constant
-
-# %% more constants
-
-ly = c * year # light year
-au = 149597870700 * m # astronomical unit
-pc = au / radians(1/3600) # parsec
-Mpc = mega * pc # megaparsec
-H0 = 72 * km/s / Mpc # Hubble parameter
-
-k = 1 / (4 * pi * epsilon0) # Coulomb constant
+hground = - me * e**4 / (8 * h**2 * epsilon0**2) # hydrogen ground state energy
 
 eV = e * V # electronvolt
 keV = kilo * eV # kilo electronvolt
 MeV = mega * eV # mega electronvolt
 GeV = giga * eV # giga electronvolt
 TeV = tera * eV # tetra electronvolt
-
 eVpc = eV / c # electronvolt per speed of light
 MeVpc = mega * eVpc # mega electronvolt per speed of light
-
 eVpc2 = eV / c**2 # electronvolt per speed of light squared
 MeVpc2 = mega * eVpc2 # mega electronvolt per speed of light squared
-
-hground = - me * e**4 / (8 * h**2 * epsilon0**2) # hydrogen ground state energy
 
 Bq = s**-1 # Becquerel
 Ci = 3.7e10 * Bq # Curie, radioactive decay
 mCi = milli * Ci # millicurie
 uCi = micro * Ci # microcurie
+
+G = 6.67430e-11 * m**3 * kg**-1 * s**-2 # Newtonian constant of gravitation
+au = 149597870700 * m # astronomical unit
+ly = c * year # light year
+pc = au / radians(1/3600) # parsec
+Mpc = mega * pc # megaparsec
+H0 = 72 * km/s / Mpc # Hubble parameter
 
 # %% testings
 
@@ -318,12 +303,26 @@ for v, q in globals().copy().items():
     if isinstance(q, Quantity):
         if v == 's':
             table += '\nSI Units\n'
+        elif v == 'g':
+            table += '\nClassical Mechanics\n'
+        elif v == 'C':
+            table += '\nElectromagnetism\n'
+        elif v == 'Bq':
+            table += '\nRadioactive Decay\n'
         elif v == 'minute':
-            table += '\nDerived Units\n'
-        elif v == 'c':
-            table += '\nUniversal Constants\n'
-        elif v == 'ly':
-            table += '\nMore Constants\n'
+            table += '\nTime\n'
+        elif v == 'km':
+            table += '\nLength\n'
+        elif v == 'mile':
+            table += '\nEveryday Life\n'
+        elif v == 'G':
+            table += '\nCosmology\n'
+        elif v == 'h':
+            table += '\nThermodynamics\n'
+        elif v == 'me':
+            table += '\nAtomic Physics\n'
+        elif v == 'eV':
+            table += '\nParticle Physics\n'
         table += '{:<15}{:<28.9g}{}\n'.format(v, q.value, repr(q.unit))
 
 print(table)

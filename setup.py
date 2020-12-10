@@ -1,4 +1,3 @@
-# git pull
 # test electronvolt.py using command I
 # update README.md
 # update version number in setuptools.setup
@@ -18,7 +17,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="0.0.5",
+    version="0.0.6",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator.",
     long_description=long_description,
