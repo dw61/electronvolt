@@ -2,7 +2,7 @@
 # update README.md
 # update version number in setuptools.setup
 # python setup.py sdist bdist_wheel
-# twine upload dist/* -u diego51
+# twine upload dist/*
 # rm -r build dist *.egg-info
 # pip install electronvolt -U
 # test module in nteract
@@ -17,7 +17,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="0.0.6",
+    version="0.1.0",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator.",
     long_description=long_description,

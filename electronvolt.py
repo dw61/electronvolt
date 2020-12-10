@@ -1,12 +1,4 @@
-# .sh or make for version upgrade commandline automation
-# token
 # domain and range issues for trigonometry
-# explanations at the print table
-# work with ufloat, maybe unit outside it?
-# printing with latex support in notebook? like sympy matrix?
-# https://en.wikipedia.org/wiki/Branches_of_physics#Relativistic_mechanics
-# map of physics
-# nuclear physics category
 
 # %% double percentage sign for hydrogen cell separation
 
@@ -196,11 +188,34 @@ K = Quantity(1, Unit({'K' : 1}))
 mol = Quantity(1, Unit({'mol' : 1}))
 cd = Quantity(1, Unit({'Cd' : 1}))
 
+minute = 60 * s
+hour = 60 * minute
+day = 24 * hour
+week = 7 * day
+year = 365.25 * day # average year
+ms = milli * s
+us = micro * s # microsecond
+ns = nano * s
+
+km = kilo * m
+dm = deci * m
+cm = centi * m
+mm = milli * m
+um = micro * m # micrometer
+nm = nano * m
+fm = femto * m # fermi
+
 g = 9.80665 * m / s**2 # gravitational acceleration
 N = kg * m / s**2 # Newton
 Pa = N / m**2 # Pascal
 J = N * m # Joule
 W = J / s # Watt
+
+h = 6.62607015e-34 * J * s # Planck constant
+hbar = h / (2 * pi) # reduced Planck constant
+NA = 6.02214076e23 * mol**-1 # Avogadro constant
+kB = 1.380649e-23 * J / K # Boltzmann constant
+R = NA * kB # ideal gas constant
 
 C = A * s # Coulomb
 V = J / C # Voltage
@@ -215,24 +230,6 @@ epsilon0 = 1 / (mu0 * c**2) # vacuum electric permittivity
 k = 1 / (4 * pi * epsilon0) # Coulomb constant
 e = 1.602176634e-19 * C # elementary charge
 
-minute = 60 * s
-hour = 60 * minute
-day = 24 * hour
-week = 7 * day
-year = 365.25 * day # average year
-ms = milli * s
-us = micro * s # microsecond
-ns = nano * s
-Hz = s**-1 # Hertz
-
-km = kilo * m
-dm = deci * m
-cm = centi * m
-mm = milli * m
-um = micro * m # micrometer
-nm = nano * m
-fm = femto * m # fermi
-
 mile = 1609.344 * m # miles
 kph = km / hour # kilometer per hour
 mph = mile / hour # miles per hour
@@ -241,23 +238,24 @@ gram = kg / kilo # gram
 L = dm**3 # liter
 kWh = kilo * W * hour # kilowatt-hour
 
-h = 6.62607015e-34 * J * s # Planck constant
-hbar = h / (2 * pi) # reduced Planck constant
-NA = 6.02214076e23 * mol**-1 # Avogadro constant
-kB = 1.380649e-23 * J / K # Boltzmann constant
-R = NA * kB # ideal gas constant
-sigma = pi**2 * kB**4 / (60 * hbar**3 * c**2) # Stefan-Boltzmann constant
-
 me = 9.1093837015e-31 * kg # electron mass
 mp = 1.67262192369e-27 * kg # proton mass
 mn = 1.67492749804e-27 * kg # neutron mass
 u = 1.66053906660e-27 * kg # atomic mass unit, 1/12 atomic mass of carbon 12
 mH = 1.007825 * u # atomic mass of Hydrogen
 mHe = 4.002602 * u # atomic mass of Helium
+
+Hz = s**-1 # Hertz
+sigma = pi**2 * kB**4 / (60 * hbar**3 * c**2) # Stefan-Boltzmann constant
 a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
+hground = - me * e**4 / (8 * h**2 * epsilon0**2) # hydrogen ground state energy
 alpha = e**2 / (4 * pi * epsilon0 * hbar * c) # fine structure constant
 Rinfty = alpha**2 * me * c / (2 * h) # Rydberg constant
-hground = - me * e**4 / (8 * h**2 * epsilon0**2) # hydrogen ground state energy
+
+Bq = s**-1 # Becquerel
+Ci = 3.7e10 * Bq # Curie, radioactive decay
+mCi = milli * Ci # millicurie
+uCi = micro * Ci # microcurie
 
 eV = e * V # electronvolt
 keV = kilo * eV # kilo electronvolt
@@ -268,11 +266,6 @@ eVpc = eV / c # electronvolt per speed of light
 MeVpc = mega * eVpc # mega electronvolt per speed of light
 eVpc2 = eV / c**2 # electronvolt per speed of light squared
 MeVpc2 = mega * eVpc2 # mega electronvolt per speed of light squared
-
-Bq = s**-1 # Becquerel
-Ci = 3.7e10 * Bq # Curie, radioactive decay
-mCi = milli * Ci # millicurie
-uCi = micro * Ci # microcurie
 
 G = 6.67430e-11 * m**3 * kg**-1 * s**-2 # Newtonian constant of gravitation
 au = 149597870700 * m # astronomical unit
@@ -304,26 +297,28 @@ for v, q in globals().copy().items():
     if isinstance(q, Quantity):
         if v == 's':
             table += '\nSI Units\n'
-        elif v == 'g':
-            table += '\nClassical Mechanics\n'
-        elif v == 'C':
-            table += '\nElectromagnetism\n'
-        elif v == 'Bq':
-            table += '\nRadioactive Decay\n'
         elif v == 'minute':
             table += '\nTime\n'
         elif v == 'km':
             table += '\nLength\n'
-        elif v == 'mile':
-            table += '\nEveryday Life\n'
-        elif v == 'G':
-            table += '\nCosmology\n'
+        elif v == 'g':
+            table += '\nClassical Mechanics\n'
         elif v == 'h':
             table += '\nThermodynamics\n'
+        elif v == 'C':
+            table += '\nElectromagnetism\n'
+        elif v == 'mile':
+            table += '\nEveryday Life\n'
         elif v == 'me':
             table += '\nAtomic Physics\n'
+        elif v == 'Hz':
+            table += '\nQuantum Mechanics\n'
+        elif v == 'Bq':
+            table += '\nRadioactive Decay\n'
         elif v == 'eV':
-            table += '\nParticle Physics\n'
+            table += '\nNuclear Physics\n'
+        elif v == 'G':
+            table += '\nCosmology\n'
         table += '{:<15}{:<28.9g}{}\n'.format(v, q.value, repr(q.unit))
 
 print(table)
