@@ -6,6 +6,7 @@
 # printing with latex support in notebook? like sympy matrix?
 # https://en.wikipedia.org/wiki/Branches_of_physics#Relativistic_mechanics
 # map of physics
+# nuclear physics category
 
 # %% double percentage sign for hydrogen cell separation
 
