@@ -1,5 +1,5 @@
 # domain and range issues for trigonometry
-# %% double percentage sign for hydrogen cell separation
+# %% double percent sign comment  as hydrogen cell separator
 
 from math import pi
 from math import e as euler # prevent duplicating elementary charge
