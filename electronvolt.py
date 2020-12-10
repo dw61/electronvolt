@@ -1,5 +1,4 @@
 # domain and range issues for trigonometry
-
 # %% double percentage sign for hydrogen cell separation
 
 from math import pi
