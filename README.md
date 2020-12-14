@@ -51,7 +51,7 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | pi                        | 3\.14159265  |                                                    |
 | euler                     | 2\.71828183  |                                                    |
 |                           |              |                                                    |
-| **SI Metric Prefixes**    |              |                                                    |
+| **Metric Prefixes**       |              |                                                    |
 | yotta                     | 1\.00E\+24   |                                                    |
 | zetta                     | 1\.00E\+21   |                                                    |
 | exa                       | 1\.00E\+18   |                                                    |

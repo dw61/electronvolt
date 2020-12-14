@@ -1,4 +1,4 @@
-# domain and range issues for trigonometry
+# possible domain and range issues for trigonometry
 # %% double percent sign comment as hydrogen cell separator
 
 from math import pi
@@ -303,7 +303,7 @@ for v, q in globals().copy().items():
         if v == 'pi':
             table += '\nMath Constants\n'
         elif v == 'yotta':
-            table += '\nSI Metric Prefixes\n'
+            table += '\nMetric Prefixes\n'
         table += '{:<15}{:.9g}\n'.format(v, q)
 
     if isinstance(q, Quantity):
