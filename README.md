@@ -36,7 +36,7 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 * Recommended to use in an interactive python environment, e.g. jupyter notebook.
 * Recommended to import via `from electronvolt import *`.
 
-#### Alternatively, run this module online [**HERE**](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb).
+#### You can also run this module online [**HERE**](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb).
 
 * This page typically loads in 3 minutes.
 * Use shift+enter to run a block of code.
