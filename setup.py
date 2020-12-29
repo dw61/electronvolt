@@ -5,7 +5,7 @@
 # twine upload dist/*
 # rm -r build dist *.egg-info
 # pip install electronvolt -U
-# test module in nteract
+# test module in nteract or terminal at home directory
 # git commit and push
 # pypi.org/project/electronvolt
 # github.com/dw61/electronvolt
@@ -17,7 +17,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="1.0.2",
+    version="1.0.3",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator.",
     long_description=long_description,

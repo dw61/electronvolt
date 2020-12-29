@@ -1,5 +1,5 @@
-# possible domain and range issues for trigonometry
-# %% double percent sign comment as hydrogen cell separator
+# possible domain and range issues for trigonometric functions
+# %% comments starting with double percent sign are hydrogen cell separators
 
 from math import pi
 from math import e as euler # prevent duplicating elementary charge
@@ -124,7 +124,7 @@ class Quantity:
         assert not self.unit
         return float(self.value)
 
-# %% trigonometry
+# %% trigonometric functions
 
 # sin, provided by math, input in radians
 # cos
@@ -165,7 +165,7 @@ acsch = lambda x : asinh(1 / x)
 asech = lambda x : acosh(1 / x)
 acoth = lambda x : atanh(1 / x)
 
-# %% SI metric prefixes
+# %% prefixes
 
 yotta = 1e24
 zetta = 1e21
@@ -188,6 +188,12 @@ femto = 1e-15
 atto = 1e-18
 zepto = 1e-21
 yocto = 1e-24
+
+hundred = hecto
+thousand = kilo
+million = mega
+billion = giga
+trillion = tera
 
 # %% units and constants
 
@@ -304,6 +310,8 @@ for v, q in globals().copy().items():
             table += '\nMath Constants\n'
         elif v == 'yotta':
             table += '\nMetric Prefixes\n'
+        elif v == 'hundred':
+            table += '\nOther Prefixes\n'
         table += '{:<15}{:.9g}\n'.format(v, q)
 
     if isinstance(q, Quantity):

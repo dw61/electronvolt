@@ -73,6 +73,13 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | zepto                     | 1\.00E\-21   |                                                    |
 | yocto                     | 1\.00E\-24   |                                                    |
 |                           |              |                                                    |
+| **Other Prefixes**        |              |                                                    |
+| hundred                   | 100          |                                                    |
+| thousand                  | 1000         |                                                    |
+| million                   | 1000000      |                                                    |
+| billion                   | 1\.00E\+09   |                                                    |
+| trillion                  | 1\.00E\+12   |                                                    |
+|                           |              |                                                    |
 | **SI Units**              |              |                                                    |
 | s                         | 1            | s                                                  |
 | m                         | 1            | m                                                  |
