@@ -222,6 +222,12 @@ um = micro * m # micrometer
 nm = nano * m
 fm = femto * m # fermi
 
+Hz = s**-1 # Hertz
+kHz = kilo * Hz
+MHz = mega * Hz
+GHz = giga * Hz
+THz = tera * Hz
+
 g = 9.80665 * m / s**2 # gravitational acceleration
 N = kg * m / s**2 # Newton
 Pa = N / m**2 # Pascal
@@ -262,7 +268,6 @@ u = 1.66053906660e-27 * kg # atomic mass unit, 1/12 atomic mass of carbon 12
 mH = 1.007825 * u # atomic mass of Hydrogen
 mHe = 4.002602 * u # atomic mass of Helium
 
-Hz = s**-1 # Hertz
 sigma = pi**2 * kB**4 / (60 * hbar**3 * c**2) # Stefan-Boltzmann constant
 a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
 hground = - me * e**4 / (8 * h**2 * epsilon0**2) # hydrogen ground state energy
@@ -312,7 +317,7 @@ for v, q in globals().copy().items():
             table += '\nMetric Prefixes\n'
         elif v == 'hundred':
             table += '\nOther Prefixes\n'
-        table += '{:<15}{:.9g}\n'.format(v, q)
+        table += '{:<12}{:.9g}\n'.format(v, q)
 
     if isinstance(q, Quantity):
         if v == 's':
@@ -321,6 +326,8 @@ for v, q in globals().copy().items():
             table += '\nTime\n'
         elif v == 'km':
             table += '\nLength\n'
+        elif v == 'Hz':
+            table += '\nFrequency\n'
         elif v == 'g':
             table += '\nClassical Mechanics\n'
         elif v == 'h':
@@ -331,7 +338,7 @@ for v, q in globals().copy().items():
             table += '\nEveryday Life\n'
         elif v == 'me':
             table += '\nAtomic Physics\n'
-        elif v == 'Hz':
+        elif v == 'sigma':
             table += '\nQuantum Mechanics\n'
         elif v == 'Bq':
             table += '\nRadioactive Decay\n'
@@ -339,7 +346,7 @@ for v, q in globals().copy().items():
             table += '\nNuclear Physics\n'
         elif v == 'G':
             table += '\nCosmology\n'
-        table += '{:<15}{:<28.9g}{}\n'.format(v, q.value, repr(q.unit))
+        table += '{:<12}{:<20.9g}{}\n'.format(v, q.value, repr(q.unit))
 
 print(table)
 

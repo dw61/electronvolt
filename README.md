@@ -108,6 +108,13 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | nm                        | 1\.00E\-09   | m                                                  |
 | fm                        | 1\.00E\-15   | m                                                  |
 |                           |              |                                                    |
+| **Frequency**             |              |                                                    |
+| Hz                        | 1            | s\*\*\-1                                           |
+| kHz                       | 1000         | s\*\*\-1                                           |
+| MHz                       | 1000000      | s\*\*\-1                                           |
+| GHz                       | 1\.00E\+09   | s\*\*\-1                                           |
+| THz                       | 1\.00E\+12   | s\*\*\-1                                           |
+|                           |              |                                                    |
 | **Classical Mechanics**   |              |                                                    |
 | g                         | 9\.80665     | m \* s\*\*\-2                                      |
 | N                         | 1            | kg \* m \* s\*\*\-2                                |
@@ -153,7 +160,6 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | mHe                       | 6\.65E\-27   | kg                                                 |
 |                           |              |                                                    |
 | **Quantum Mechanics**     |              |                                                    |
-| Hz                        | 1            | s\*\*\-1                                           |
 | sigma                     | 5\.67E\-08   | kg \* K\*\*\-4 \* s\*\*\-3                         |
 | a0                        | 5\.29E\-11   | m                                                  |
 | hground                   | \-2\.18E\-18 | kg \* m\*\*2 \* s\*\*\-2                           |
