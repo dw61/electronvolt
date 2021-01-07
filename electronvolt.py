@@ -317,7 +317,7 @@ for v, q in globals().copy().items():
             table += '\nMetric Prefixes\n'
         elif v == 'hundred':
             table += '\nOther Prefixes\n'
-        table += '{:<12}{:.9g}\n'.format(v, q)
+        table += '{:<15}{:.9g}\n'.format(v, q)
 
     if isinstance(q, Quantity):
         if v == 's':
@@ -346,7 +346,7 @@ for v, q in globals().copy().items():
             table += '\nNuclear Physics\n'
         elif v == 'G':
             table += '\nCosmology\n'
-        table += '{:<12}{:<20.9g}{}\n'.format(v, q.value, repr(q.unit))
+        table += '{:<15}{:<25.9g}{}\n'.format(v, q.value, repr(q.unit))
 
 print(table)
 
