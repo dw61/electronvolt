@@ -73,7 +73,7 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | zepto                     | 1\.00E\-21   |                                                    |
 | yocto                     | 1\.00E\-24   |                                                    |
 |                           |              |                                                    |
-| **Other Prefixes**        |              |                                                    |
+| **Common Prefixes**       |              |                                                    |
 | hundred                   | 100          |                                                    |
 | thousand                  | 1000         |                                                    |
 | million                   | 1000000      |                                                    |
@@ -143,12 +143,22 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | k                         | 8\.99E\+09   | kg \* m\*\*3 \* s\*\*\-4 \* A\*\*\-2               |
 | e                         | 1\.60E\-19   | s \* A                                             |
 |                           |              |                                                    |
-| **Everyday Life**         |              |                                                    |
+| **Imperial Units**        |              |                                                    |
+| inch                      | 0\.0254      | m                                                  |
+| foot                      | 0\.3048      | m                                                  |
+| yard                      | 0\.9144      | m                                                  |
 | mile                      | 1609\.344    | m                                                  |
+| lb                        | 0\.45359237  | kg                                                 |
+| lbf                       | 4\.44822162  | kg \* m \* s\*\*\-2                                |
+| slug                      | 14\.5939029  | kg                                                 |
+| blob                      | 175\.126835  | kg                                                 |
+|                           |              |                                                    |
+| **Common Units**          |              |                                                    |
 | kph                       | 0\.277777778 | m \* s\*\*\-1                                      |
 | mph                       | 0\.44704     | m \* s\*\*\-1                                      |
 | gram                      | 0\.001       | kg                                                 |
 | L                         | 0\.001       | m\*\*3                                             |
+| psi                       | 6894\.757    | kg \* m\*\*\-1 \* s\*\*\-2                         |
 | kWh                       | 3600000      | kg \* m\*\*2 \* s\*\*\-2                           |
 |                           |              |                                                    |
 | **Atomic Physics**        |              |                                                    |
@@ -166,7 +176,7 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | alpha                     | 0\.007297353 |                                                    |
 | Rinfty                    | 10973731\.6  | m\*\*\-1                                           |
 |                           |              |                                                    |
-| **Radioactive Decay**     |              |                                                    |
+| **Radioactive Decays**    |              |                                                    |
 | Bq                        | 1            | s\*\*\-1                                           |
 | Ci                        | 3\.70E\+10   | s\*\*\-1                                           |
 | mCi                       | 37000000     | s\*\*\-1                                           |

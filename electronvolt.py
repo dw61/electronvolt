@@ -253,12 +253,21 @@ epsilon0 = 1 / (mu0 * c**2) # vacuum electric permittivity
 k = 1 / (4 * pi * epsilon0) # Coulomb constant
 e = 1.602176634e-19 * C # elementary charge
 
-mile = 1609.344 * m # miles
+inch = 25.4 * mm # symbol in is a python keyword
+foot = 12 * inch
+yard = 3 * foot
+mile = 1760 * yard
+
+lb = 0.45359237 * kg # pound mass
+lbf = lb * g # pound force
+slug = lbf * s**2 / foot # imperial unit of mass
+blob = lbf * s**2 / inch # imperial unit of mass
+
 kph = km / hour # kilometer per hour
 mph = mile / hour # miles per hour
-
 gram = kg / kilo # gram
 L = dm**3 # liter
+psi = 6.894757 * kilo * Pa # pound per square inch
 kWh = kilo * W * hour # kilowatt-hour
 
 me = 9.1093837015e-31 * kg # electron mass
@@ -316,7 +325,7 @@ for v, q in globals().copy().items():
         elif v == 'yotta':
             table += '\nMetric Prefixes\n'
         elif v == 'hundred':
-            table += '\nOther Prefixes\n'
+            table += '\nCommon Prefixes\n'
         table += '{:<15}{:.9g}\n'.format(v, q)
 
     if isinstance(q, Quantity):
@@ -334,14 +343,16 @@ for v, q in globals().copy().items():
             table += '\nThermodynamics\n'
         elif v == 'C':
             table += '\nElectromagnetism\n'
-        elif v == 'mile':
-            table += '\nEveryday Life\n'
+        elif v == 'inch':
+            table += '\nImperial Units\n'
+        elif v == 'kph':
+            table += '\nCommon Units\n'
         elif v == 'me':
             table += '\nAtomic Physics\n'
         elif v == 'sigma':
             table += '\nQuantum Mechanics\n'
         elif v == 'Bq':
-            table += '\nRadioactive Decay\n'
+            table += '\nRadioactive Decays\n'
         elif v == 'eV':
             table += '\nNuclear Physics\n'
         elif v == 'G':
