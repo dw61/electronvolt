@@ -241,7 +241,7 @@ kB = 1.380649e-23 * J / K # Boltzmann constant
 R = NA * kB # ideal gas constant
 
 C = A * s # Coulomb
-V = J / C # Voltage
+V = J / C # Volt
 F = C / V # Farad
 Ohm = V / A # Ohm
 T = V * s / m**2 # Tesla
@@ -274,8 +274,8 @@ me = 9.1093837015e-31 * kg # electron mass
 mp = 1.67262192369e-27 * kg # proton mass
 mn = 1.67492749804e-27 * kg # neutron mass
 u = 1.66053906660e-27 * kg # atomic mass unit, 1/12 atomic mass of carbon 12
-mH = 1.007825 * u # atomic mass of Hydrogen
-mHe = 4.002602 * u # atomic mass of Helium
+mH = 1.007825 * u # atomic mass of hydrogen
+mHe = 4.002602 * u # atomic mass of helium
 
 sigma = pi**2 * kB**4 / (60 * hbar**3 * c**2) # Stefan-Boltzmann constant
 a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
@@ -289,16 +289,16 @@ mCi = milli * Ci # millicurie
 uCi = micro * Ci # microcurie
 
 eV = e * V # electronvolt
-keV = kilo * eV # kilo electronvolt
-MeV = mega * eV # mega electronvolt
-GeV = giga * eV # giga electronvolt
-TeV = tera * eV # tetra electronvolt
+keV = kilo * eV # kilo-electronvolt
+MeV = mega * eV # mega-electronvolt
+GeV = giga * eV # giga-electronvolt
+TeV = tera * eV # tera-electronvolt
 eVpc = eV / c # electronvolt per speed of light
-MeVpc = mega * eVpc # mega electronvolt per speed of light
-eVpc2 = eV / c**2 # electronvolt per speed of light squared
-MeVpc2 = mega * eVpc2 # mega electronvolt per speed of light squared
+MeVpc = mega * eVpc # mega-electronvolt per c
+eVpc2 = eV / c**2 # electronvolt per c squared
+MeVpc2 = mega * eVpc2 # mega-electronvolt per c squared
 
-G = 6.67430e-11 * m**3 * kg**-1 * s**-2 # Newtonian constant of gravitation
+G = 6.67430e-11 * m**3 * kg**-1 * s**-2 # gravitational constant
 au = 149597870700 * m # astronomical unit
 ly = c * year # light year
 pc = au / radians(1/3600) # parsec
