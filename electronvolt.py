@@ -330,7 +330,7 @@ for v, q in globals().copy().items():
 
     if isinstance(q, Quantity):
         if v == 's':
-            table += '\nSI Units\n'
+            table += '\nSI Base Units\n'
         elif v == 'minute':
             table += '\nTime\n'
         elif v == 'km':
