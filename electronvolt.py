@@ -1,3 +1,5 @@
+# defaults to float, __pow__ at line ~111
+# 0 * kg
 # possible domain and range issues for trigonometric functions
 # %% comments starting with double percent sign are hydrogen cell separators
 
@@ -53,7 +55,7 @@ class Quantity:
     def __repr__(self):
         if not self.unit:
             return repr(self.value)
-        return '{0} {1}'.format(self.value, repr(self.unit))
+        return '{0} * {1}'.format(self.value, self.unit)
 
     def __eq__(self, other):
         return self.value == other.value and self.unit == other.unit
@@ -73,7 +75,7 @@ class Quantity:
     def __add__(self, other):
         if isinstance(other, (int, float)): # handles 1*kg/kg + 1
             return self + Quantity(other, Unit({})) # implicit-ish recursion
-        assert self.unit == other.unit # check for same unit. not considering 0*kg + 1*m = 1*m
+        assert self.unit == other.unit, "Addition undefined between '{0}' and '{1}'".format(self.unit, other.unit)
         return Quantity(self.value + other.value, self.unit)
 
     def __radd__(self, other):
@@ -82,7 +84,7 @@ class Quantity:
     def __sub__(self, other):
         if isinstance(other, (int, float)): # handles 1*kg/kg - 1
             return self - Quantity(other, Unit({}))
-        assert self.unit == other.unit
+        assert self.unit == other.unit, "Subtraction undefined between '{0}' and '{1}'".format(self.unit, other.unit)
         return Quantity(self.value - other.value, self.unit)
 
     def __neg__(self):
@@ -92,7 +94,7 @@ class Quantity:
         return - (self - other) # self.__rsub__(other) becomes -self.__sub__(other)
 
     def __mul__(self, other): # both kg*10 and kg*m works
-        if isinstance(other, (int, float)):
+        if isinstance(other, (int, float)): # not considering 0*kg == 0
             return self * Quantity(other, Unit({}))
         return Quantity(self.value * other.value, self.unit * other.unit)
 
@@ -108,10 +110,11 @@ class Quantity:
         return (self / other) ** -1
 
     def __pow__(self, exponent):
+        # assert isinstance(exponent, (int, float)), "Exponent of '{}' is undefined".format(exponent)
         return Quantity(self.value ** exponent, self.unit ** exponent)
 
     def __rpow__(self, base): # handles euler ** (1*s/s)
-        assert not self.unit
+        assert not self.unit, "Exponent of '{}' is undefined".format(self.unit)
         return base ** self.value
 
     def __contains__(self, other):
@@ -120,8 +123,8 @@ class Quantity:
     def __bool__(self):
         return bool(self.value)
 
-    def __float__(self): # handles sin(1*m/m)
-        assert not self.unit
+    def __float__(self): # handles exp(1*s/s)
+        assert not self.unit, "Conversion undefined from '{}' to ''".format(self.unit)
         return float(self.value)
 
 # %% trigonometric functions

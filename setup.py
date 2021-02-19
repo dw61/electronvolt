@@ -1,14 +1,15 @@
-# test electronvolt.py using command I
+# test electronvolt.py in terminal
 # update README.md
 # update version number in setuptools.setup
+# rm -r __pycache__
 # python setup.py sdist bdist_wheel
 # twine upload dist/*
 # rm -r build dist *.egg-info
 # pip install electronvolt -U
-# test module in nteract or terminal at home directory
 # git commit and push
 # pypi.org/project/electronvolt
 # github.com/dw61/electronvolt
+# test module in home directory and on mybinder.org
 
 import setuptools
 
@@ -17,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="1.2.3",
+    version="1.3.0",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator.",
     long_description=long_description,
