@@ -9,7 +9,7 @@
 # git commit and push
 # pypi.org/project/electronvolt
 # github.com/dw61/electronvolt
-# test module in home directory and on mybinder.org
+# test module in home directory or on mybinder.org
 
 import setuptools
 
@@ -18,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="1.3.0",
+    version="1.3.1",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator.",
     long_description=long_description,

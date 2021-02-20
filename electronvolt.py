@@ -1,6 +1,3 @@
-# defaults to float, __pow__ at line ~111
-# 0 * kg
-# possible domain and range issues for trigonometric functions
 # %% comments starting with double percent sign are hydrogen cell separators
 
 from math import pi
@@ -110,7 +107,6 @@ class Quantity:
         return (self / other) ** -1
 
     def __pow__(self, exponent):
-        # assert isinstance(exponent, (int, float)), "Exponent of '{}' is undefined".format(exponent)
         return Quantity(self.value ** exponent, self.unit ** exponent)
 
     def __rpow__(self, base): # handles euler ** (1*s/s)
