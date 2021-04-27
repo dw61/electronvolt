@@ -1,11 +1,9 @@
-# %% comments starting with double percent sign are hydrogen cell separators
-
 from math import pi
 from math import e as euler # prevent duplicating elementary charge
 from math import log as ln # log defaults to ln
 from math import exp, sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh, degrees, radians
 
-# %% unit converter
+# unit converter
 
 class Unit:
 
@@ -41,7 +39,7 @@ class Unit:
     def __bool__(self):
         return bool(self.d)
 
-# %% physical quantity calculator
+# physical quantity calculator
 
 class Quantity:
 
@@ -66,7 +64,7 @@ class Quantity:
     def __le__(self, other):
         return self.value <= other.value and self.unit == other.unit
 
-    def __gt__(self, other):
+    def __ge__(self, other):
         return self.value >= other.value and self.unit == other.unit
 
     def __add__(self, other):
@@ -123,7 +121,7 @@ class Quantity:
         assert not self.unit, "Conversion undefined from '{}' to ''".format(self.unit)
         return float(self.value)
 
-# %% trigonometric functions
+# trigonometric functions
 
 # sin, provided by math, input in radians
 # cos
@@ -164,7 +162,7 @@ acsch = lambda x : asinh(1 / x)
 asech = lambda x : acosh(1 / x)
 acoth = lambda x : atanh(1 / x)
 
-# %% prefixes
+# prefixes
 
 yotta = 1e24
 zetta = 1e21
@@ -194,7 +192,7 @@ million = mega
 billion = giga
 trillion = tera
 
-# %% units and constants
+# units and constants
 
 s = Quantity(1, Unit({'s' : 1}))
 m = Quantity(1, Unit({'m' : 1}))
@@ -304,18 +302,17 @@ pc = au / radians(1/3600) # parsec
 Mpc = mega * pc # megaparsec
 H0 = 72 * km/s / Mpc # Hubble parameter
 
-# %% testings
+# testings
 
 assert 1 * m != 1 * s
-assert 2 * kg + 2 * kg < 5 * kg
+assert 2 * kg + 2 * kg <= 5 * kg
 assert N / C == V / m
 assert kg * c**2 in J
 assert pc > ly
 
-# %% print constant table at import
+# print constant table at import
 
 table = ''
-
 for v, q in globals().copy().items():
 
     if isinstance(q, (int, float)):
@@ -359,5 +356,3 @@ for v, q in globals().copy().items():
         table += '{:<15}{:<25.9g}{}\n'.format(v, q.value, repr(q.unit))
 
 print(table)
-
-# %% new cell
