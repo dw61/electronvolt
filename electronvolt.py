@@ -88,7 +88,7 @@ class Quantity:
         return Quantity(-self.value, self.unit)
 
     def __rsub__(self, other):
-        return - (self - other) # self.__rsub__(other) becomes -self.__sub__(other)
+        return -(self - other) # self.__rsub__(other) becomes -self.__sub__(other)
 
     def __mul__(self, other): # both kg*10 and kg*m works
         if isinstance(other, (int, float)): # not considering 0*kg == 0
