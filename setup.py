@@ -1,4 +1,4 @@
-# test electronvolt.py with atom script package
+# test electronvolt.py with atom script
 # update README.md
 # update version number in setuptools.setup
 # rm -r __pycache__
@@ -18,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="1.3.2",
+    version="1.3.3",
     author_email="lw7jz@virginia.edu",
     description="A physical quantity calculator.",
     long_description=long_description,

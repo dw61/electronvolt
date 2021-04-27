@@ -56,16 +56,20 @@ class Quantity:
         return self.value == other.value and self.unit == other.unit
 
     def __lt__(self, other):
-        return self.value < other.value and self.unit == other.unit
+        assert self.unit == other.unit, "'<' undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        return self.value < other.value
 
     def __gt__(self, other):
-        return self.value > other.value and self.unit == other.unit
+        assert self.unit == other.unit, "'>' undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        return self.value > other.value
 
     def __le__(self, other):
-        return self.value <= other.value and self.unit == other.unit
+        assert self.unit == other.unit, "'<=' undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        return self.value <= other.value
 
     def __ge__(self, other):
-        return self.value >= other.value and self.unit == other.unit
+        assert self.unit == other.unit, "'>=' undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        return self.value >= other.value
 
     def __add__(self, other):
         if isinstance(other, (int, float)): # handles 1*kg/kg + 1
