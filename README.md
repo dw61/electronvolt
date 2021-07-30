@@ -2,17 +2,31 @@ A physics quantity calculator with units.
 
 ## Demo
 
+###### Rest mass of an electron
+
 ```
->>> me # Rest mass of an electron
+>>> me
 9.1093837015e-31 * kg
+```
 
->>> c # Speed of light
+**Speed of light**
+
+```
+>>> c
 299792458.0 * m * s**-1
+```
 
->>> me * c**2 # Rest energy of an electron, in SI units
+##### Rest energy of an electron, in SI units
+
+```
+>>> me * c**2
 8.187105776823886e-14 * m**2 * s**-2 * kg
+```
 
->>> me * c**2 / MeV # In mega electronvolts
+In mega electronvolts
+
+```
+>>> me * c**2 / MeV
 0.5109989499961642
 ```
 
