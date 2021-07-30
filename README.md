@@ -16,14 +16,14 @@ A physics quantity calculator with units.
 299792458.0 * m * s**-1
 ```
 
-**Rest energy of an electron**, in SI units
+**Rest energy of an electron, in SI units**
 
 ```
 >>> me * c**2
 8.187105776823886e-14 * m**2 * s**-2 * kg
 ```
 
-Rest energy of an electron, in **mega electronvolts**
+**Rest energy of an electron, in mega electronvolts**
 
 ```
 >>> me * c**2 / MeV
