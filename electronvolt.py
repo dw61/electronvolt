@@ -16,7 +16,7 @@ class Unit:
             if power == 1:
                 terms.append(unit)
             else:
-                terms.append('{0}**{1}'.format(unit, power))
+                terms.append(f'{unit}**{power}')
         return ' * '.join(terms)
 
     def __eq__(self, other):
@@ -50,31 +50,31 @@ class Quantity:
     def __repr__(self):
         if not self.unit:
             return repr(self.value)
-        return '{0} * {1}'.format(self.value, self.unit)
+        return f'{self.value} * {self.unit}'
 
     def __eq__(self, other):
         return self.value == other.value and self.unit == other.unit
 
     def __lt__(self, other):
-        assert self.unit == other.unit, "'<' undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        assert self.unit == other.unit, f"'<' undefined between '{self.unit}' and '{other.unit}'"
         return self.value < other.value
 
     def __gt__(self, other):
-        assert self.unit == other.unit, "'>' undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        assert self.unit == other.unit, f"'>' undefined between '{self.unit}' and '{other.unit}'"
         return self.value > other.value
 
     def __le__(self, other):
-        assert self.unit == other.unit, "'<=' undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        assert self.unit == other.unit, f"'<=' undefined between '{self.unit}' and '{other.unit}'"
         return self.value <= other.value
 
     def __ge__(self, other):
-        assert self.unit == other.unit, "'>=' undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        assert self.unit == other.unit, f"'>=' undefined between '{self.unit}' and '{other.unit}'"
         return self.value >= other.value
 
     def __add__(self, other):
         if isinstance(other, (int, float)): # handles 1*kg/kg + 1
             return self + Quantity(other, Unit({})) # implicit-ish recursion
-        assert self.unit == other.unit, "Addition undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        assert self.unit == other.unit, f"Addition undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value + other.value, self.unit)
 
     def __radd__(self, other):
@@ -83,7 +83,7 @@ class Quantity:
     def __sub__(self, other):
         if isinstance(other, (int, float)): # handles 1*kg/kg - 1
             return self - Quantity(other, Unit({}))
-        assert self.unit == other.unit, "Subtraction undefined between '{0}' and '{1}'".format(self.unit, other.unit)
+        assert self.unit == other.unit, f"Subtraction undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value - other.value, self.unit)
 
     def __neg__(self):
@@ -112,7 +112,7 @@ class Quantity:
         return Quantity(self.value ** exponent, self.unit ** exponent)
 
     def __rpow__(self, base): # handles euler ** (1*s/s)
-        assert not self.unit, "Exponent of '{}' is undefined".format(self.unit)
+        assert not self.unit, f"Exponent of '{self.unit}' is undefined"
         return base ** self.value
 
     def __contains__(self, other):
@@ -122,7 +122,7 @@ class Quantity:
         return bool(self.value)
 
     def __float__(self): # handles exp(1*s/s)
-        assert not self.unit, "Conversion undefined from '{}' to ''".format(self.unit)
+        assert not self.unit, f"Conversion undefined from '{self.unit}' to ''"
         return float(self.value)
 
 # trigonometric functions
@@ -326,7 +326,7 @@ for v, q in globals().copy().items():
             table += '\nMetric Prefixes\n'
         elif v == 'hundred':
             table += '\nCommon Prefixes\n'
-        table += '{:<15}{:.9g}\n'.format(v, q)
+        table += f'{v:<15}{q:.9g}\n'
 
     if isinstance(q, Quantity):
         if v == 's':
@@ -357,6 +357,6 @@ for v, q in globals().copy().items():
             table += '\nNuclear Physics\n'
         elif v == 'G':
             table += '\nCosmology\n'
-        table += '{:<15}{:<25.9g}{}\n'.format(v, q.value, repr(q.unit))
+        table += f'{v:<15}{q.value:<25.9g}{q.unit}\n'
 
 print(table)
