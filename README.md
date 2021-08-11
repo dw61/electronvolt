@@ -147,10 +147,12 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | elementary charge               | e        | 1\.60E\-19   | s \* A                                             |
 |                                 |          |              |                                                    |
 | **Imperial Units**              |          |              |                                                    |
-|                                 | inch     | 0\.0254      | m                                                  |
-|                                 | foot     | 0\.3048      | m                                                  |
-|                                 | yard     | 0\.9144      | m                                                  |
-|                                 | mile     | 1609\.344    | m                                                  |
+| inch ('in' is a python keyword) | _in      | 0\.0254      | m                                                  |
+| foot                            | ft       | 0\.3048      | m                                                  |
+| yard                            | yd       | 0\.9144      | m                                                  |
+| mile                            | mi       | 1609\.344    | m                                                  |
+| nautical mile                   | NM       | 1852         | m                                                  |
+| knot                            | kn       | 0\.514444444 | m \* s\*\*\-1                                      |
 | pound-mass                      | lb       | 0\.45359237  | kg                                                 |
 | pound-force                     | lbf      | 4\.44822162  | kg \* m \* s\*\*\-2                                |
 |                                 | slug     | 14\.5939029  | kg                                                 |
