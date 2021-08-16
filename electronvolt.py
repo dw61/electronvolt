@@ -254,17 +254,18 @@ epsilon0 = 1 / (mu0 * c**2) # vacuum electric permittivity
 k = 1 / (4 * pi * epsilon0) # Coulomb constant
 e = 1.602176634e-19 * C # elementary charge
 
-_in = 25.4 * mm # 'in' is a python keyword
-ft = 12 * _in
+in_ = 25.4 * mm # 'in' is a python keyword
+ft = 12 * in_
 yd = 3 * ft
 mi = 1760 * yd
+acre = (66 * ft) * (660 * ft)
 NM = 1852 * m # nautical mile
 kn = NM / hour # knot
 
 lb = 0.45359237 * kg # pound mass
 lbf = lb * g # pound force
 slug = lbf * s**2 / ft # imperial unit of mass
-blob = lbf * s**2 / _in # imperial unit of mass
+blob = lbf * s**2 / in_ # imperial unit of mass
 
 kph = km / hour # kilometer per hour
 mph = mi / hour # miles per hour
@@ -272,6 +273,7 @@ gram = kg / kilo # gram
 L = dm**3 # liter
 psi = 6.894757 * kilo * Pa # pound per square inch
 kWh = kilo * W * hour # kilowatt-hour
+ha = (hecto * m) ** 2 # hectare
 
 me = 9.1093837015e-31 * kg # electron mass
 mp = 1.67262192369e-27 * kg # proton mass
@@ -345,7 +347,7 @@ for v, q in globals().copy().items():
             table += '\nThermodynamics\n'
         elif v == 'C':
             table += '\nElectromagnetism\n'
-        elif v == '_in':
+        elif v == 'in_':
             table += '\nImperial Units\n'
         elif v == 'kph':
             table += '\nCommon Units\n'

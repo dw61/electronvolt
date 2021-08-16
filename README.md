@@ -147,10 +147,11 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | elementary charge               | e        | 1\.60E\-19   | s \* A                                             |
 |                                 |          |              |                                                    |
 | **Imperial Units**              |          |              |                                                    |
-| inch ('in' is a python keyword) | _in      | 0\.0254      | m                                                  |
+| inch ('in' is a python keyword) | in_      | 0\.0254      | m                                                  |
 | foot                            | ft       | 0\.3048      | m                                                  |
 | yard                            | yd       | 0\.9144      | m                                                  |
 | mile                            | mi       | 1609\.344    | m                                                  |
+|                                 | acre     | 4046\.85642  | m\*\*2                                             |
 | nautical mile                   | NM       | 1852         | m                                                  |
 | knot                            | kn       | 0\.514444444 | m \* s\*\*\-1                                      |
 | pound-mass                      | lb       | 0\.45359237  | kg                                                 |
@@ -165,6 +166,7 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 | liter                           | L        | 0\.001       | m\*\*3                                             |
 | pound per square inch           | psi      | 6894\.757    | kg \* m\*\*\-1 \* s\*\*\-2                         |
 | kilowatt-hour                   | kWh      | 3600000      | kg \* m\*\*2 \* s\*\*\-2                           |
+| hectare                         | ha       | 10000        | m\*\*2                                             |
 |                                 |          |              |                                                    |
 | **Atomic Physics**              |          |              |                                                    |
 | electron rest mass              | me       | 9\.11E\-31   | kg                                                 |
