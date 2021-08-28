@@ -72,7 +72,7 @@ class Quantity:
         return self.value >= other.value
 
     def __add__(self, other):
-        if isinstance(other, (int, float)): # handles 1*kg/kg + 1
+        if isinstance(other, (int, float, complex)): # handles 1*kg/kg + 1
             return self + Quantity(other, Unit({})) # implicit-ish recursion
         assert self.unit == other.unit, f"Addition undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value + other.value, self.unit)
@@ -81,7 +81,7 @@ class Quantity:
         return self + other
 
     def __sub__(self, other):
-        if isinstance(other, (int, float)): # handles 1*kg/kg - 1
+        if isinstance(other, (int, float, complex)): # handles 1*kg/kg - 1
             return self - Quantity(other, Unit({}))
         assert self.unit == other.unit, f"Subtraction undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value - other.value, self.unit)
@@ -93,7 +93,7 @@ class Quantity:
         return -(self - other) # self.__rsub__(other) becomes -self.__sub__(other)
 
     def __mul__(self, other): # both kg*10 and kg*m works
-        if isinstance(other, (int, float)): # not considering 0*kg == 0
+        if isinstance(other, (int, float, complex)): # not considering 0*kg == 0
             return self * Quantity(other, Unit({}))
         return Quantity(self.value * other.value, self.unit * other.unit)
 
@@ -101,7 +101,7 @@ class Quantity:
         return self * other
 
     def __truediv__(self, other):
-        if isinstance(other, (int, float)):
+        if isinstance(other, (int, float, complex)):
             return self / Quantity(other, Unit({}))
         return Quantity(self.value / other.value, self.unit / other.unit)
 
@@ -323,7 +323,7 @@ assert pc > ly
 table = ''
 for v, q in globals().copy().items():
 
-    if isinstance(q, (int, float)):
+    if isinstance(q, (int, float, complex)):
         if v == 'pi':
             table += '\nMath Constants\n'
         elif v == 'yotta':
