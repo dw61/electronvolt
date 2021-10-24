@@ -8,7 +8,7 @@ from math import exp, sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, 
 class Unit:
 
     def __init__(self, d):
-        self.d = {unit:power for unit, power in d.items() if power} # remove zero power
+        self.d = {unit : power for unit, power in d.items() if power} # remove zero power
 
     def __repr__(self): # for commandline convenience. __str__ redirects here
         terms = []
@@ -33,8 +33,8 @@ class Unit:
         return Unit(d)
 
     def __pow__(self, p):
-        result = {unit : power * p for unit, power in self.d.items()}
-        return Unit(result)
+        d = {unit : power * p for unit, power in self.d.items()}
+        return Unit(d)
 
     def __bool__(self):
         return bool(self.d)
@@ -86,11 +86,11 @@ class Quantity:
         assert self.unit == other.unit, f"Subtraction undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value - other.value, self.unit)
 
+    def __rsub__(self, other): # calls __neg__
+        return -(self - other) # self.__rsub__(other) becomes -self.__sub__(other)
+
     def __neg__(self):
         return Quantity(-self.value, self.unit)
-
-    def __rsub__(self, other):
-        return -(self - other) # self.__rsub__(other) becomes -self.__sub__(other)
 
     def __mul__(self, other): # both kg*10 and kg*m works
         if isinstance(other, (int, float, complex)): # not considering 0*kg == 0
@@ -112,7 +112,7 @@ class Quantity:
         return Quantity(self.value ** exponent, self.unit ** exponent)
 
     def __rpow__(self, base): # handles euler ** (1*s/s)
-        assert not self.unit, f"Exponent of '{self.unit}' is undefined"
+        assert not self.unit, f"Exponent cannot have unit '{self.unit}'"
         return base ** self.value
 
     def __contains__(self, other):
@@ -284,7 +284,7 @@ mHe = 4.002602 * u # atomic mass of helium
 
 sigma = pi**2 * kB**4 / (60 * hbar**3 * c**2) # Stefan-Boltzmann constant
 a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
-hground = - me * e**4 / (8 * h**2 * epsilon0**2) # hydrogen ground state energy
+hground = -me * e**4 / (8 * h**2 * epsilon0**2) # hydrogen ground state energy
 alpha = e**2 / (4 * pi * epsilon0 * hbar * c) # fine structure constant
 Rinfty = alpha**2 * me * c / (2 * h) # Rydberg constant
 

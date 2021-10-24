@@ -40,7 +40,7 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 
 #### You can also run this module online [**HERE**](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb).
 
-* This page typically loads in 3 minutes.
+* This page typically loads within 3 minutes.
 * Use shift+enter to run a block of code.
 * Run the first block to initialize the calculator.
 * Run the second block to feel how it works.
