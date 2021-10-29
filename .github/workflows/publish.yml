@@ -1,0 +1,32 @@
+name: Publish to PyPI
+
+on:
+  push:
+    branch: master
+    paths: setup.py
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout electronvolt
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+
+    - name: Test electronvolt
+      run: python -B tests.py
+
+    - name: Install publishing packages
+      run: pip install build twine
+
+    - name: Build
+      run: python -m build
+
+    - name: Publish
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+      run: twine upload dist/*

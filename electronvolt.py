@@ -310,14 +310,6 @@ pc = au / radians(1/3600) # parsec
 Mpc = mega * pc # megaparsec
 H0 = 72 * km/s / Mpc # Hubble parameter
 
-# testings
-
-assert 1 * m != 1 * s
-assert 2 * kg + 2 * kg <= 5 * kg
-assert N / C == V / m
-assert kg * c**2 in J
-assert pc > ly
-
 # print constant table at import
 
 table = ''
