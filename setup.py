@@ -1,15 +1,8 @@
-# test electronvolt.py with atom script
-# python -i electronvolt.py
+# python -iB tests.py
 # update README.md
 # update version number in setuptools.setup
-# rm -r __pycache__
-# python setup.py sdist bdist_wheel
-# twine upload dist/*
-# rm -r build dist *.egg-info
-# pip install electronvolt -U
 # git commit and push
-# pypi.org/project/electronvolt
-# github.com/dw61/electronvolt
+# pip install electronvolt -U
 # test module in home directory or on mybinder.org
 
 import setuptools
@@ -21,7 +14,7 @@ setuptools.setup(
     name="electronvolt",
     version="1.4.2",
     author_email="lw7jz@virginia.edu",
-    description="A physical quantity calculator.",
+    description="A physics quantity calculator with units.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/dw61/electronvolt",

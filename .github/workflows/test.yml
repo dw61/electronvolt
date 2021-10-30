@@ -1,0 +1,16 @@
+name: Test Electronvolt
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout electronvolt
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+
+    - name: Test electronvolt
+      run: python tests.py
