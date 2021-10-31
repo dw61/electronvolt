@@ -31,7 +31,7 @@ A physics quantity calculator with units.
 0.5109989499961642
 ```
 
-This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
+This matches the electron rest energy on [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
 
 **Rest mass of an electron, with [uncertainties](https://github.com/lebigot/uncertainties)**
 
@@ -49,7 +49,7 @@ This matches the rest energy of electron on [Wikipedia](https://en.wikipedia.org
 (8.1871057768+/-0.0000000025)e-14 * kg * s**-2 * m**2
 ```
 
-This matches the rest energy of electron with uncertainties on the same Wikipedia page.
+This matches the electron rest energy, with uncertainties, on the same Wikipedia page.
 
 ## Usage
 
