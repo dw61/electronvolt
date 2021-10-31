@@ -1,7 +1,7 @@
 from electronvolt import *
 
 assert c == 299792458*m/s
-assert euler**(1*s/s) == exp(1)
+assert euler**(1*s/s) == exp(1*kg/kg)
 assert cos(-pi) == -1
 assert 12 != 12*kg
 assert 2 == 1*kg/kg + 1

@@ -53,8 +53,8 @@ class Quantity:
         return f'{self.value} * {self.unit}'
 
     def __eq__(self, other):
-        if isinstance(other, (int, float, complex)): # not considering 0*kg == 0
-            return self == Quantity(other) # implicit-ish recursion
+        if not isinstance(other, Quantity): # not considering 0*kg == 0
+            other = Quantity(other)
         return self.value == other.value and self.unit == other.unit
 
     def __lt__(self, other):
@@ -74,8 +74,8 @@ class Quantity:
         return self.value >= other.value
 
     def __add__(self, other):
-        if isinstance(other, (int, float, complex)): # handles 1*kg/kg + 1
-            return self + Quantity(other)
+        if not isinstance(other, Quantity): # handles 1*kg/kg + 1
+            other = Quantity(other)
         assert self.unit == other.unit, f"Addition undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value + other.value, self.unit)
 
@@ -83,8 +83,8 @@ class Quantity:
         return self + other
 
     def __sub__(self, other):
-        if isinstance(other, (int, float, complex)): # handles 1*kg/kg - 1
-            return self - Quantity(other)
+        if not isinstance(other, Quantity): # handles 1*kg/kg - 1
+            other = Quantity(other)
         assert self.unit == other.unit, f"Subtraction undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value - other.value, self.unit)
 
@@ -95,16 +95,16 @@ class Quantity:
         return Quantity(-self.value, self.unit)
 
     def __mul__(self, other): # both kg*10 and kg*m works
-        if isinstance(other, (int, float, complex)):
-            return self * Quantity(other)
+        if not isinstance(other, Quantity):
+            other = Quantity(other)
         return Quantity(self.value * other.value, self.unit * other.unit)
 
     def __rmul__(self, other): # handles 10*kg
         return self * other
 
     def __truediv__(self, other):
-        if isinstance(other, (int, float, complex)):
-            return self / Quantity(other)
+        if not isinstance(other, Quantity):
+            other = Quantity(other)
         return Quantity(self.value / other.value, self.unit / other.unit)
 
     def __rtruediv__(self, other):
@@ -126,6 +126,10 @@ class Quantity:
     def __float__(self): # handles exp(1*s/s)
         assert not self.unit, f"Conversion undefined from '{self.unit}' to ''"
         return float(self.value)
+
+    def __complex__(self):
+        assert not self.unit, f"Conversion undefined from '{self.unit}' to ''"
+        return complex(self.value)
 
 # trigonometric functions
 
