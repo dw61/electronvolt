@@ -53,6 +53,8 @@ class Quantity:
         return f'{self.value} * {self.unit}'
 
     def __eq__(self, other):
+        if isinstance(other, (int, float, complex)): # not considering 0*kg == 0
+            return self == Quantity(other, Unit({})) # implicit-ish recursion
         return self.value == other.value and self.unit == other.unit
 
     def __lt__(self, other):
@@ -73,7 +75,7 @@ class Quantity:
 
     def __add__(self, other):
         if isinstance(other, (int, float, complex)): # handles 1*kg/kg + 1
-            return self + Quantity(other, Unit({})) # implicit-ish recursion
+            return self + Quantity(other, Unit({}))
         assert self.unit == other.unit, f"Addition undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value + other.value, self.unit)
 
@@ -93,7 +95,7 @@ class Quantity:
         return Quantity(-self.value, self.unit)
 
     def __mul__(self, other): # both kg*10 and kg*m works
-        if isinstance(other, (int, float, complex)): # not considering 0*kg == 0
+        if isinstance(other, (int, float, complex)):
             return self * Quantity(other, Unit({}))
         return Quantity(self.value * other.value, self.unit * other.unit)
 
