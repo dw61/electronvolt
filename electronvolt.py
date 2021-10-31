@@ -45,7 +45,7 @@ class Quantity:
 
     def __init__(self, value, unit=None, **d):
         self.value = value
-        self.unit = unit if unit else Unit(d)
+        self.unit = unit if isinstance(unit, Unit) else Unit(d)
 
     def __repr__(self):
         if not self.unit:
