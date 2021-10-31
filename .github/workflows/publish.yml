@@ -16,6 +16,9 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
 
+    - name: Install testing packages
+      run: pip install uncertainties
+
     - name: Test electronvolt
       run: python -B tests.py
 

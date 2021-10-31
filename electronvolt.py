@@ -43,9 +43,10 @@ class Unit:
 
 class Quantity:
 
-    def __init__(self, value, unit=None, **d):
+    def __init__(self, value, unit):
         self.value = value
-        self.unit = unit if isinstance(unit, Unit) else Unit(d)
+        self.unit = unit
+        assert self.unit # not dimensionless
 
     def __repr__(self):
         if not self.unit:
@@ -54,7 +55,7 @@ class Quantity:
 
     def __eq__(self, other):
         if not isinstance(other, Quantity): # not considering 0*kg == 0
-            other = Quantity(other)
+            return False # Quantity != dimensionless
         return self.value == other.value and self.unit == other.unit
 
     def __lt__(self, other):
@@ -74,44 +75,42 @@ class Quantity:
         return self.value >= other.value
 
     def __add__(self, other):
-        if not isinstance(other, Quantity): # handles 1*kg/kg + 1
-            other = Quantity(other)
+        assert isinstance(other, Quantity), f"Addition undefined between '{self.unit}' and ''"
         assert self.unit == other.unit, f"Addition undefined between '{self.unit}' and '{other.unit}'"
-        return Quantity(self.value + other.value, self.unit)
+        return quantity(self.value + other.value, self.unit)
 
     def __radd__(self, other):
         return self + other
 
     def __sub__(self, other):
-        if not isinstance(other, Quantity): # handles 1*kg/kg - 1
-            other = Quantity(other)
+        assert isinstance(other, Quantity), f"Subtraction undefined between '{self.unit}' and ''"
         assert self.unit == other.unit, f"Subtraction undefined between '{self.unit}' and '{other.unit}'"
-        return Quantity(self.value - other.value, self.unit)
+        return quantity(self.value - other.value, self.unit)
 
     def __rsub__(self, other): # calls __neg__
         return -(self - other) # self.__rsub__(other) becomes -self.__sub__(other)
 
     def __neg__(self):
-        return Quantity(-self.value, self.unit)
+        return quantity(-self.value, self.unit)
 
     def __mul__(self, other): # both kg*10 and kg*m works
         if not isinstance(other, Quantity):
-            other = Quantity(other)
-        return Quantity(self.value * other.value, self.unit * other.unit)
+            return quantity(self.value * other, self.unit)
+        return quantity(self.value * other.value, self.unit * other.unit)
 
     def __rmul__(self, other): # handles 10*kg
         return self * other
 
     def __truediv__(self, other):
         if not isinstance(other, Quantity):
-            other = Quantity(other)
-        return Quantity(self.value / other.value, self.unit / other.unit)
+            return quantity(self.value / other, self.unit)
+        return quantity(self.value / other.value, self.unit / other.unit)
 
     def __rtruediv__(self, other):
         return (self / other) ** -1
 
     def __pow__(self, exponent):
-        return Quantity(self.value ** exponent, self.unit ** exponent)
+        return quantity(self.value ** exponent, self.unit ** exponent)
 
     def __rpow__(self, base): # handles euler ** (1*s/s)
         assert not self.unit, f"Exponent cannot have unit '{self.unit}'"
@@ -123,13 +122,13 @@ class Quantity:
     def __bool__(self):
         return bool(self.value)
 
-    def __float__(self): # handles exp(1*s/s)
-        assert not self.unit, f"Conversion undefined from '{self.unit}' to ''"
-        return float(self.value)
+# wrapper
 
-    def __complex__(self):
-        assert not self.unit, f"Conversion undefined from '{self.unit}' to ''"
-        return complex(self.value)
+def quantity(value, unit=None, **d):
+    unit = unit if isinstance(unit, Unit) else Unit(d) # enforce Unit type
+    if not unit:
+        return value # value can be any type
+    return Quantity(value, unit)
 
 # trigonometric functions
 
@@ -204,13 +203,13 @@ trillion = tera
 
 # units and constants
 
-s = Quantity(1, s=1)
-m = Quantity(1, m=1)
-kg = Quantity(1, kg=1)
-A = Quantity(1, A=1)
-K = Quantity(1, K=1)
-mol = Quantity(1, mol=1)
-cd = Quantity(1, cd=1)
+s = quantity(1, s=1)
+m = quantity(1, m=1)
+kg = quantity(1, kg=1)
+A = quantity(1, A=1)
+K = quantity(1, K=1)
+mol = quantity(1, mol=1)
+cd = quantity(1, cd=1)
 
 minute = 60 * s
 hour = 60 * minute
@@ -316,7 +315,7 @@ pc = au / radians(1/3600) # parsec
 Mpc = mega * pc # megaparsec
 H0 = 72 * km/s / Mpc # Hubble parameter
 
-# print constant table at import
+# table of constants
 
 table = ''
 for v, q in globals().copy().items():
@@ -360,5 +359,3 @@ for v, q in globals().copy().items():
         elif v == 'G':
             table += '\nCosmology\n'
         table += f'{v:<15}{q.value:<25.9g}{q.unit}\n'
-
-print(table)
