@@ -46,6 +46,7 @@ class Quantity:
     def __init__(self, value, unit):
         self.value = value
         self.unit = unit
+        assert self.unit # not dimensionless
 
     def __repr__(self):
         if not self.unit:
@@ -124,7 +125,7 @@ class Quantity:
 # wrapper
 
 def quantity(value, unit=None, **d):
-    unit = unit if isinstance(unit, Unit) else Unit(d) # unit must be Unit type
+    unit = unit if isinstance(unit, Unit) else Unit(d) # enforce Unit type
     if not unit:
         return value # value can be any type
     return Quantity(value, unit)
@@ -314,7 +315,7 @@ pc = au / radians(1/3600) # parsec
 Mpc = mega * pc # megaparsec
 H0 = 72 * km/s / Mpc # Hubble parameter
 
-# print constant table at import
+# table of constants
 
 table = ''
 for v, q in globals().copy().items():
@@ -358,5 +359,3 @@ for v, q in globals().copy().items():
         elif v == 'G':
             table += '\nCosmology\n'
         table += f'{v:<15}{q.value:<25.9g}{q.unit}\n'
-
-print(table)
