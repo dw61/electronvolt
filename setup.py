@@ -1,9 +1,9 @@
 # python -iB tests.py
-# update README.md
-# update version number in setuptools.setup
+# README.md
+# version number at setuptools.setup
 # git commit and push
 # pip install electronvolt -U
-# test module in home directory or on mybinder.org
+# test from home directory or on mybinder.org
 
 import setuptools
 
@@ -19,5 +19,5 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/dw61/electronvolt",
     py_modules=["electronvolt"],
-    python_requires='>=3.6',
+    python_requires=">=3.6",
 )

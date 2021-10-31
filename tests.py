@@ -1,4 +1,3 @@
-# use python -B tests.py to avoid __pycache__
 from electronvolt import *
 
 assert 1 * m != 1 * s
