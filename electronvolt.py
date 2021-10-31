@@ -43,9 +43,9 @@ class Unit:
 
 class Quantity:
 
-    def __init__(self, value, unit):
+    def __init__(self, value, **unit):
         self.value = value
-        self.unit = unit
+        self.unit = Unit(unit)
 
     def __repr__(self):
         if not self.unit:
@@ -54,7 +54,7 @@ class Quantity:
 
     def __eq__(self, other):
         if isinstance(other, (int, float, complex)): # not considering 0*kg == 0
-            return self == Quantity(other, Unit({})) # implicit-ish recursion
+            return self == Quantity(other) # implicit-ish recursion
         return self.value == other.value and self.unit == other.unit
 
     def __lt__(self, other):
@@ -75,7 +75,7 @@ class Quantity:
 
     def __add__(self, other):
         if isinstance(other, (int, float, complex)): # handles 1*kg/kg + 1
-            return self + Quantity(other, Unit({}))
+            return self + Quantity(other)
         assert self.unit == other.unit, f"Addition undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value + other.value, self.unit)
 
@@ -84,7 +84,7 @@ class Quantity:
 
     def __sub__(self, other):
         if isinstance(other, (int, float, complex)): # handles 1*kg/kg - 1
-            return self - Quantity(other, Unit({}))
+            return self - Quantity(other)
         assert self.unit == other.unit, f"Subtraction undefined between '{self.unit}' and '{other.unit}'"
         return Quantity(self.value - other.value, self.unit)
 
@@ -96,7 +96,7 @@ class Quantity:
 
     def __mul__(self, other): # both kg*10 and kg*m works
         if isinstance(other, (int, float, complex)):
-            return self * Quantity(other, Unit({}))
+            return self * Quantity(other)
         return Quantity(self.value * other.value, self.unit * other.unit)
 
     def __rmul__(self, other): # handles 10*kg
@@ -104,7 +104,7 @@ class Quantity:
 
     def __truediv__(self, other):
         if isinstance(other, (int, float, complex)):
-            return self / Quantity(other, Unit({}))
+            return self / Quantity(other)
         return Quantity(self.value / other.value, self.unit / other.unit)
 
     def __rtruediv__(self, other):
@@ -200,13 +200,13 @@ trillion = tera
 
 # units and constants
 
-s = Quantity(1, Unit({'s' : 1}))
-m = Quantity(1, Unit({'m' : 1}))
-kg = Quantity(1, Unit({'kg' : 1}))
-A = Quantity(1, Unit({'A' : 1}))
-K = Quantity(1, Unit({'K' : 1}))
-mol = Quantity(1, Unit({'mol' : 1}))
-cd = Quantity(1, Unit({'cd' : 1}))
+s = Quantity(1, s=1)
+m = Quantity(1, m=1)
+kg = Quantity(1, kg=1)
+A = Quantity(1, A=1)
+K = Quantity(1, K=1)
+mol = Quantity(1, mol=1)
+cd = Quantity(1, cd=1)
 
 minute = 60 * s
 hour = 60 * minute
