@@ -43,12 +43,9 @@ class Unit:
 
 class Quantity:
 
-    def __init__(self, value, u=None, **unit):
+    def __init__(self, value, unit=None, **d):
         self.value = value
-        if u:
-            self.unit = u
-        else:
-            self.unit = Unit(unit)
+        self.unit = unit if unit else Unit(d)
 
     def __repr__(self):
         if not self.unit:

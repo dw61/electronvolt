@@ -5,6 +5,7 @@ assert euler**(1*s/s) == exp(1)
 assert cos(-pi) == -1
 assert 12 != 12*kg
 assert 2 == 1*kg/kg + 1
+assert Quantity(6, kg=5, mol=-2) == 6*kg**5/mol**2
 
 assert 1*m != 1*s
 assert 2*kg + kg*2 <= 5*kg
