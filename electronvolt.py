@@ -291,7 +291,7 @@ sigma = pi**2 * kB**4 / (60 * hbar**3 * c**2) # Stefan-Boltzmann constant
 a0 = 4 * pi * epsilon0 * hbar**2 / (me * e**2) # Bohr radius
 hground = -me * e**4 / (8 * h**2 * epsilon0**2) # hydrogen ground state energy
 alpha = e**2 / (4 * pi * epsilon0 * hbar * c) # fine structure constant
-Rinfty = alpha**2 * me * c / (2 * h) # Rydberg constant
+Rydberg = alpha**2 * me * c / (2 * h) # Rydberg constant
 
 Bq = s**-1 # Becquerel
 Ci = 3.7e10 * Bq # Curie, radioactive decay
