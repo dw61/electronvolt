@@ -149,7 +149,7 @@ This matches the electron rest energy, with uncertainties, on the same Wikipedia
 |reduced Planck constant        |`hbar`    |1.05E-34   |kg m2 s-1         |
 |Avogadro constant              |`NA`      |6.02E+23   |mol-1             |
 |Boltzmann constant             |`kB`      |1.38E-23   |kg m2 s-2 K-1     |
-|ideal gas constant             |`R`       |8.31446262 |`kg mol-1 K-1 m2 s-2`|
+|ideal gas constant             |`R`       |8.31446262 |`kg` `mol-1` `K-1` `m2` `s-2`|
 |                               |          |           |                  |
 |**Electromagnetism**           |          |           |                  |
 |coulomb                        |`C`       |1          |s A               |
