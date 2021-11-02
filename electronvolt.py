@@ -46,7 +46,6 @@ class Quantity:
     def __init__(self, value, unit):
         self.value = value
         self.unit = unit
-        assert self.unit # not dimensionless
 
     def __repr__(self):
         if not self.unit:
@@ -124,9 +123,10 @@ class Quantity:
 
 # wrapper
 
-def quantity(value, unit=None, **d):
-    unit = unit if isinstance(unit, Unit) else Unit(d) # enforce Unit type
-    if not unit:
+def quantity(value=1, unit=None, **d):
+    if not isinstance(unit, Unit): # enforce Unit type implicitly
+        unit = Unit(d)
+    if not unit: # Quantity cannot be dimensionless
         return value # value can be any type
     return Quantity(value, unit)
 
@@ -203,13 +203,13 @@ trillion = tera
 
 # units and constants
 
-s = quantity(1, s=1)
-m = quantity(1, m=1)
-kg = quantity(1, kg=1)
-A = quantity(1, A=1)
-K = quantity(1, K=1)
-mol = quantity(1, mol=1)
-cd = quantity(1, cd=1)
+s = quantity(s=1)
+m = quantity(m=1)
+kg = quantity(kg=1)
+A = quantity(A=1)
+K = quantity(K=1)
+mol = quantity(mol=1)
+cd = quantity(cd=1)
 
 minute = 60 * s
 hour = 60 * minute
