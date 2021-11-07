@@ -1,7 +1,7 @@
 # python -iB tests.py
 # README.md
 # version number at setuptools.setup
-# git commit, push, pull, delete branch
+# commit, push, merge, pull, delete branch
 # pip install electronvolt -U
 # test from home directory or on mybinder.org
 
@@ -12,7 +12,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="1.5.4",
+    version="1.5.5",
     author_email="lw7jz@virginia.edu",
     description="A physics quantity calculator with units.",
     long_description=long_description,

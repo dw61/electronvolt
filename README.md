@@ -10,21 +10,21 @@ A physics quantity calculator with units.
 9.1093837015e-31 * kg
 ```
 
-**Speed of light**
+Speed of light
 
 ```
 >>> c
 299792458.0 * m * s**-1
 ```
 
-**Rest energy of an electron, in SI units**
+Rest energy of an electron, in SI units
 
 ```
 >>> me * c**2
 8.187105776823886e-14 * m**2 * s**-2 * kg
 ```
 
-**Rest energy of an electron, in mega electronvolts**
+Rest energy of an electron, in mega electronvolts
 
 ```
 >>> me * c**2 / MeV
@@ -42,7 +42,7 @@ This matches the electron rest energy on [Wikipedia](https://en.wikipedia.org/wi
 (9.1093837015+/-0.0000000028)e-31 * kg
 ```
 
-**Rest energy of an electron, in SI units, with uncertainties**
+Rest energy of an electron, in SI units, with uncertainties
 
 ```
 >>> ume * c**2
