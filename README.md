@@ -1,57 +1,6 @@
 A physics quantity calculator with units.
 
-## Demo
-
-**Rest mass of an electron**
-
-```
->>> from electronvolt import *
->>> me
-9.1093837015e-31 * kg
-```
-
-Speed of light
-
-```
->>> c
-299792458.0 * m * s**-1
-```
-
-Rest energy of an electron, in SI units
-
-```
->>> me * c**2
-8.187105776823886e-14 * m**2 * s**-2 * kg
-```
-
-Rest energy of an electron, in mega electronvolts
-
-```
->>> me * c**2 / MeV
-0.5109989499961642
-```
-
-This matches the electron rest energy on [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
-
-**Rest mass of an electron, with [uncertainties](https://github.com/lebigot/uncertainties)**
-
-```
->>> from uncertainties import ufloat
->>> ume = ufloat(9.1093837015, 0.0000000028) * 1e-31 * kg
->>> ume
-(9.1093837015+/-0.0000000028)e-31 * kg
-```
-
-Rest energy of an electron, in SI units, with uncertainties
-
-```
->>> ume * c**2
-(8.1871057768+/-0.0000000025)e-14 * kg * s**-2 * m**2
-```
-
-This matches the electron rest energy, with uncertainties, on the same Wikipedia page.
-
-## Usage
+# Usage
 
 * Install this module via `pip install electronvolt`.
 * Recommended to use in an interactive python environment, e.g. jupyter notebook.
@@ -64,7 +13,51 @@ This matches the electron rest energy, with uncertainties, on the same Wikipedia
 * Run the first block to initialize the calculator.
 * Run the second block to feel how it works.
 
-## Units and Constants
+# Demo
+
+Rest mass of an electron
+
+```
+>>> from electronvolt import *
+>>> me
+9.1093837015e-31 * kg
+```
+
+Rest energy of the electron, in [SI](https://en.wikipedia.org/wiki/International_System_of_Units) units
+
+```
+>>> me * c**2
+8.187105776823886e-14 * m**2 * s**-2 * kg
+```
+
+In mega electronvolts
+
+```
+>>> me * c**2 / MeV
+0.5109989499961642
+```
+
+This matches the electron rest energy on [this](https://en.wikipedia.org/wiki/Electron_rest_mass) Wikipedia page.
+
+**Rest mass of an electron, with [uncertainties](https://github.com/lebigot/uncertainties)**
+
+```
+>>> from uncertainties import ufloat
+>>> ume = ufloat(9.1093837015, 0.0000000028) * 1e-31 * kg
+>>> ume
+(9.1093837015+/-0.0000000028)e-31 * kg
+```
+
+Rest energy of the electron, with uncertainties
+
+```
+>>> ume * c**2
+(8.1871057768+/-0.0000000025)e-14 * kg * s**-2 * m**2
+```
+
+This matches the electron rest energy on the [same](https://en.wikipedia.org/wiki/Electron_rest_mass) Wikipedia page.
+
+# Units and Constants
 
 |Name                           |Symbol    |Value      |Unit                         |
 |-------------------------------|----------|-----------|-----------------------------|
@@ -128,6 +121,7 @@ This matches the electron rest energy, with uncertainties, on the same Wikipedia
 |millimeter                     |`mm`      |0.001      |`m`                          |
 |micrometer                     |`um`      |1.00E-06   |`m`                          |
 |nanometer                      |`nm`      |1.00E-09   |`m`                          |
+|picometer                      |`pm`      |1.00E-12   |`m`                          |
 |femtometer                     |`fm`      |1.00E-15   |`m`                          |
 |                               |          |           |                             |
 |**Frequency**                  |          |           |                             |

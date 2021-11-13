@@ -226,6 +226,7 @@ cm = centi * m
 mm = milli * m
 um = micro * m # micrometer
 nm = nano * m
+pm = pico * m
 fm = femto * m # fermi
 
 Hz = s**-1 # Hertz
