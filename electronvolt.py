@@ -8,7 +8,11 @@ from math import exp, sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, 
 class Unit:
 
     def __init__(self, d):
-        self.d = {unit : power for unit, power in d.items() if power} # remove zero power
+        self.d = {}
+        for unit, power in d.items():
+            if power: # remove zero power
+                self.d.update({unit : power})
+        # self.d = {unit : power for unit, power in d.items() if power}
 
     def __repr__(self): # for commandline convenience. __str__ redirects here
         terms = []
