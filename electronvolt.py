@@ -11,8 +11,7 @@ class Unit:
         self.d = {}
         for unit, power in d.items():
             if power: # remove zero power
-                self.d.update({unit : power})
-        # self.d = {unit : power for unit, power in d.items() if power}
+                self.d[unit] = power
 
     def __repr__(self): # for commandline convenience. __str__ redirects here
         terms = []
@@ -27,17 +26,21 @@ class Unit:
         return self.d == other.d
 
     def __mul__(self, other):
-        units = set(self.d) | set(other.d)
-        d = {unit : self.d.get(unit, 0) + other.d.get(unit, 0) for unit in units}
+        d = {}
+        for unit in set(self.d) | set(other.d):
+            d[unit] = self.d.get(unit, 0) + other.d.get(unit, 0)
         return Unit(d)
 
     def __truediv__(self, other):
-        units = set(self.d) | set(other.d)
-        d = {unit : self.d.get(unit, 0) - other.d.get(unit, 0) for unit in units}
+        d = {}
+        for unit in set(self.d) | set(other.d):
+            d[unit] = self.d.get(unit, 0) - other.d.get(unit, 0)
         return Unit(d)
 
     def __pow__(self, p):
-        d = {unit : power * p for unit, power in self.d.items()}
+        d = {}
+        for unit, power in self.d.items():
+            d[unit] = power * p
         return Unit(d)
 
     def __bool__(self):
