@@ -1,0 +1,161 @@
+
+Math Constants
+pi          3.14159265358979
+euler       2.71828182845905
+
+Metric Prefixes
+yotta       1e+24
+zetta       1e+21
+exa         1e+18
+peta        1e+15
+tera        1000000000000
+giga        1000000000
+mega        1000000
+kilo        1000
+hecto       100
+deca        10
+deci        0.1
+centi       0.01
+milli       0.001
+micro       1e-06
+nano        1e-09
+pico        1e-12
+femto       1e-15
+atto        1e-18
+zepto       1e-21
+yocto       1e-24
+
+Common Prefixes
+hundred     100
+thousand    1000
+million     1000000
+billion     1000000000
+trillion    1000000000000
+
+SI Base Units
+s           1                        s
+m           1                        m
+kg          1                        kg
+A           1                        A
+K           1                        K
+mol         1                        mol
+cd          1                        cd
+
+Time
+minute      60                       s
+hour        3600                     s
+day         86400                    s
+week        604800                   s
+year        31557600                 s
+ms          0.001                    s
+us          1e-06                    s
+ns          1e-09                    s
+
+Length
+km          1000                     m
+dm          0.1                      m
+cm          0.01                     m
+mm          0.001                    m
+um          1e-06                    m
+nm          1e-09                    m
+pm          1e-12                    m
+fm          1e-15                    m
+
+Frequency
+Hz          1                        s**-1
+kHz         1000                     s**-1
+MHz         1000000                  s**-1
+GHz         1000000000               s**-1
+THz         1000000000000            s**-1
+
+Classical Mechanics
+g           9.80665                  m * s**-2
+N           1                        kg * m * s**-2
+Pa          1                        kg * m**-1 * s**-2
+J           1                        kg * m**2 * s**-2
+W           1                        kg * m**2 * s**-3
+
+Thermodynamics
+h           6.62607015e-34           kg * m**2 * s**-1
+hbar        1.05457181764616e-34     kg * m**2 * s**-1
+NA          6.02214076e+23           mol**-1
+kB          1.380649e-23             K**-1 * kg * m**2 * s**-2
+R           8.31446261815324         K**-1 * m**2 * s**-2 * kg * mol**-1
+
+Electromagnetism
+C           1                        s * A
+V           1                        m**2 * s**-3 * A**-1 * kg
+F           1                        s**4 * m**-2 * A**2 * kg**-1
+Ohm         1                        m**2 * s**-3 * A**-2 * kg
+T           1                        s**-2 * A**-1 * kg
+Wb          1                        m**2 * kg * s**-2 * A**-1
+H           1                        m**2 * s**-2 * A**-2 * kg
+c           299792458                m * s**-1
+mu0         1.25663706212e-06        m * s**-2 * A**-2 * kg
+epsilon0    8.85418781280039e-12     m**-3 * s**4 * A**2 * kg**-1
+k           8987551792.26078         m**3 * s**-4 * A**-2 * kg
+e           1.602176634e-19          s * A
+
+Imperial Units
+in_         0.0254                   m
+ft          0.3048                   m
+yd          0.9144                   m
+mi          1609.344                 m
+acre        4046.8564224             m**2
+NM          1852                     m
+kn          0.514444444444444        m * s**-1
+gal         0.003785411784           m**3
+lb          0.45359237               kg
+lbf         4.4482216152605          kg * m * s**-2
+slug        14.5939029372064         kg
+blob        175.126835246476         kg
+
+Common Units
+kph         0.277777777777778        m * s**-1
+mph         0.44704                  m * s**-1
+gram        0.001                    kg
+L           0.001                    m**3
+psi         6894.757                 kg * m**-1 * s**-2
+kWh         3600000                  kg * m**2 * s**-2
+ha          10000                    m**2
+
+Atomic Physics
+me          9.1093837015e-31         kg
+mp          1.67262192369e-27        kg
+mn          1.67492749804e-27        kg
+u           1.6605390666e-27         kg
+mH          1.67353278479614e-27     kg
+mHe         6.64647698905129e-27     kg
+
+Quantum Mechanics
+sigma       5.67037441918443e-08     K**-4 * s**-3 * kg
+a0          5.29177210906108e-11     m
+hground     -2.17987236108603e-18    s**-2 * m**2 * kg
+alpha       0.00729735256927772
+Rydberg     10973731.5680716         m**-1
+
+Radioactive Decays
+Bq          1                        s**-1
+Ci          37000000000              s**-1
+mCi         37000000                 s**-1
+uCi         37000                    s**-1
+
+Nuclear Physics
+eV          1.602176634e-19          s**-2 * m**2 * kg
+keV         1.602176634e-16          s**-2 * m**2 * kg
+MeV         1.602176634e-13          s**-2 * m**2 * kg
+GeV         1.602176634e-10          s**-2 * m**2 * kg
+TeV         1.602176634e-07          s**-2 * m**2 * kg
+eVpc        5.34428599267831e-28     s**-1 * m * kg
+MeVpc       5.34428599267831e-22     s**-1 * m * kg
+eVpc2       1.7826619216279e-36      kg
+MeVpc2      1.7826619216279e-30      kg
+
+Cosmology
+G           6.6743e-11               kg**-1 * m**3 * s**-2
+au          149597870700             m
+ly          9.4607304725808e+15      m
+pc          3.08567758149137e+16     m
+Mpc         3.08567758149137e+22     m
+H0          2.33336108839994e-18     s**-1
+

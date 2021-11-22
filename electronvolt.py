@@ -328,44 +328,44 @@ H0 = 72 * km/s / Mpc # Hubble parameter
 # table of constants
 
 table = ""
-for v, q in globals().copy().items():
+for symbol, object_ in globals().copy().items():
 
-    if isinstance(q, (int, float, complex)):
-        if v == "pi":
+    if isinstance(object_, (int, float, complex)):
+        if symbol == "pi":
             table += "\nMath Constants\n"
-        elif v == "yotta":
+        elif symbol == "yotta":
             table += "\nMetric Prefixes\n"
-        elif v == "hundred":
+        elif symbol == "hundred":
             table += "\nCommon Prefixes\n"
-        table += f"{v:<15}{q:.9g}\n"
+        table += f"{symbol:<12}{object_:.15g}\n"
 
-    if isinstance(q, Quantity):
-        if v == "s":
+    if isinstance(object_, Quantity):
+        if symbol == "s":
             table += "\nSI Base Units\n"
-        elif v == "minute":
+        elif symbol == "minute":
             table += "\nTime\n"
-        elif v == "km":
+        elif symbol == "km":
             table += "\nLength\n"
-        elif v == "Hz":
+        elif symbol == "Hz":
             table += "\nFrequency\n"
-        elif v == "g":
+        elif symbol == "g":
             table += "\nClassical Mechanics\n"
-        elif v == "h":
+        elif symbol == "h":
             table += "\nThermodynamics\n"
-        elif v == "C":
+        elif symbol == "C":
             table += "\nElectromagnetism\n"
-        elif v == "in_":
+        elif symbol == "in_":
             table += "\nImperial Units\n"
-        elif v == "kph":
+        elif symbol == "kph":
             table += "\nCommon Units\n"
-        elif v == "me":
+        elif symbol == "me":
             table += "\nAtomic Physics\n"
-        elif v == "sigma":
+        elif symbol == "sigma":
             table += "\nQuantum Mechanics\n"
-        elif v == "Bq":
+        elif symbol == "Bq":
             table += "\nRadioactive Decays\n"
-        elif v == "eV":
+        elif symbol == "eV":
             table += "\nNuclear Physics\n"
-        elif v == "G":
+        elif symbol == "G":
             table += "\nCosmology\n"
-        table += f"{v:<15}{q.value:<25.9g}{q.unit}\n"
+        table += f"{symbol:<12}{object_.value:<25.15g}{object_.unit}\n"
