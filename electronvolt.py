@@ -130,12 +130,13 @@ class Quantity:
 
 # wrapper
 
-def quantity(value=1, unit=None, **d):
-    if not isinstance(unit, Unit): # enforce Unit type implicitly
-        unit = Unit(d)
+def quantity(value=1, unit=None): # returns Quantity
     if not unit: # Quantity cannot be dimensionless
         return value # value can be any type
     return Quantity(value, unit)
+
+def unit(unit): # returns Quantity, despite its name
+    return quantity(1, Unit({unit : 1}))
 
 # trigonometric functions
 
@@ -210,13 +211,13 @@ trillion = tera
 
 # units and constants
 
-s = quantity(s=1)
-m = quantity(m=1)
-kg = quantity(kg=1)
-A = quantity(A=1)
-K = quantity(K=1)
-mol = quantity(mol=1)
-cd = quantity(cd=1)
+s = unit("s")
+m = unit("m")
+kg = unit("kg")
+A = unit("A")
+K = unit("K")
+mol = unit("mol")
+cd = unit("cd")
 
 minute = 60 * s
 hour = 60 * minute

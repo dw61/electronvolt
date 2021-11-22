@@ -8,7 +8,7 @@ assert euler ** (1 * s / s) == exp(kg / kg)
 assert cos(-pi) == -1
 assert 12 != 12 * kg
 assert 2 == 1 * kg / kg + 1
-assert quantity(6, kg=5, mol=-2) == 6 * kg**5 / mol**2
+# assert quantity(6, kg=5, mol=-2) == 6 * kg**5 / mol**2
 assert not isinstance(ufloat(3, 1) * km / ly, Quantity)
 assert isinstance(alpha, float)
 
