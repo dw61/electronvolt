@@ -16,8 +16,8 @@ class Unit:
             if power == 1:
                 terms.append(unit)
             else:
-                terms.append(f'{unit}**{power}')
-        return ' * '.join(terms)
+                terms.append(f"{unit}**{power}")
+        return " * ".join(terms)
 
     def __eq__(self, other):
         return self.d == other.d
@@ -50,7 +50,7 @@ class Quantity:
     def __repr__(self):
         if not self.unit:
             return repr(self.value)
-        return f'{self.value} * {self.unit}'
+        return f"{self.value} * {self.unit}"
 
     def __eq__(self, other):
         if not isinstance(other, Quantity): # not considering 0*kg == 0
@@ -260,13 +260,14 @@ epsilon0 = 1 / (mu0 * c**2) # vacuum electric permittivity
 k = 1 / (4 * pi * epsilon0) # Coulomb constant
 e = 1.602176634e-19 * C # elementary charge
 
-in_ = 25.4 * mm # 'in' is a python keyword
+in_ = 25.4 * mm # "in" is a python keyword
 ft = 12 * in_
 yd = 3 * ft
 mi = 1760 * yd
 acre = (66 * ft) * (660 * ft)
 NM = 1852 * m # nautical mile
 kn = NM / hour # knot
+gal = 231 * in_**3 # US gallon
 
 lb = 0.45359237 * kg # pound mass
 lbf = lb * g # pound force
@@ -318,45 +319,45 @@ H0 = 72 * km/s / Mpc # Hubble parameter
 
 # table of constants
 
-table = ''
+table = ""
 for v, q in globals().copy().items():
 
     if isinstance(q, (int, float, complex)):
-        if v == 'pi':
-            table += '\nMath Constants\n'
-        elif v == 'yotta':
-            table += '\nMetric Prefixes\n'
-        elif v == 'hundred':
-            table += '\nCommon Prefixes\n'
-        table += f'{v:<15}{q:.9g}\n'
+        if v == "pi":
+            table += "\nMath Constants\n"
+        elif v == "yotta":
+            table += "\nMetric Prefixes\n"
+        elif v == "hundred":
+            table += "\nCommon Prefixes\n"
+        table += f"{v:<15}{q:.9g}\n"
 
     if isinstance(q, Quantity):
-        if v == 's':
-            table += '\nSI Base Units\n'
-        elif v == 'minute':
-            table += '\nTime\n'
-        elif v == 'km':
-            table += '\nLength\n'
-        elif v == 'Hz':
-            table += '\nFrequency\n'
-        elif v == 'g':
-            table += '\nClassical Mechanics\n'
-        elif v == 'h':
-            table += '\nThermodynamics\n'
-        elif v == 'C':
-            table += '\nElectromagnetism\n'
-        elif v == 'in_':
-            table += '\nImperial Units\n'
-        elif v == 'kph':
-            table += '\nCommon Units\n'
-        elif v == 'me':
-            table += '\nAtomic Physics\n'
-        elif v == 'sigma':
-            table += '\nQuantum Mechanics\n'
-        elif v == 'Bq':
-            table += '\nRadioactive Decays\n'
-        elif v == 'eV':
-            table += '\nNuclear Physics\n'
-        elif v == 'G':
-            table += '\nCosmology\n'
-        table += f'{v:<15}{q.value:<25.9g}{q.unit}\n'
+        if v == "s":
+            table += "\nSI Base Units\n"
+        elif v == "minute":
+            table += "\nTime\n"
+        elif v == "km":
+            table += "\nLength\n"
+        elif v == "Hz":
+            table += "\nFrequency\n"
+        elif v == "g":
+            table += "\nClassical Mechanics\n"
+        elif v == "h":
+            table += "\nThermodynamics\n"
+        elif v == "C":
+            table += "\nElectromagnetism\n"
+        elif v == "in_":
+            table += "\nImperial Units\n"
+        elif v == "kph":
+            table += "\nCommon Units\n"
+        elif v == "me":
+            table += "\nAtomic Physics\n"
+        elif v == "sigma":
+            table += "\nQuantum Mechanics\n"
+        elif v == "Bq":
+            table += "\nRadioactive Decays\n"
+        elif v == "eV":
+            table += "\nNuclear Physics\n"
+        elif v == "G":
+            table += "\nCosmology\n"
+        table += f"{v:<15}{q.value:<25.9g}{q.unit}\n"

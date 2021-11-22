@@ -167,6 +167,7 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |                               |`acre`    |4046.85642 |`m2`                         |
 |nautical mile                  |`NM`      |1852       |`m`                          |
 |knot                           |`kn`      |0.514444444|`m` `s-1`                    |
+|US gallon                      |`gal`     |0.003785411|`m3`                         |
 |pound-mass                     |`lb`      |0.45359237 |`kg`                         |
 |pound-force                    |`lbf`     |4.44822162 |`kg` `m` `s-2`               |
 |                               |`slug`    |14.5939029 |`kg`                         |
