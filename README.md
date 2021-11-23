@@ -183,12 +183,12 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |hectare                        |`ha`      |10000            |`m2`                         |
 |                               |          |                 |                             |
 |**Atomic Physics**             |          |                 |                             |
-|electron rest mass             |`me`      |`9.1093837015` `e-31` |`kg`                         |
-|proton mass                    |`mp`      |`1.67262192369` `e-27`|`kg`                         |
-|neutron mass                   |`mn`      |`1.67492749804` `e-27`|`kg`                         |
-|atomic mass unit               |`u`       |`1.6605390666` `e-27` |`kg`                         |
-|atomic mass of hydrogen        |`mH`      |`1.6735327848` `e-27` |`kg`                         |
-|atomic mass of helium          |`mHe`     |`6.64647698905` `e-27`|`kg`                         |
+|electron rest mass             |`me`      |9.1093837015`e-31` |`kg`                         |
+|proton mass                    |`mp`      |1.67262192369`e-27`|`kg`                         |
+|neutron mass                   |`mn`      |1.67492749804`e-27`|`kg`                         |
+|atomic mass unit               |`u`       |1.6605390666`e-27` |`kg`                         |
+|atomic mass of hydrogen        |`mH`      |1.6735327848`e-27` |`kg`                         |
+|atomic mass of helium          |`mHe`     |6.64647698905`e-27`|`kg`                         |
 |                               |          |                 |                             |
 |**Quantum Mechanics**          |          |                 |                             |
 |Stefan-Boltzmann constant      |`sigma`   |5.67037441918`e-08`|`kg` `K-4` `s-3`             |
@@ -204,15 +204,15 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |microcurie                     |`uCi`     |37000            |`s-1`                        |
 |                               |          |                 |                             |
 |**Nuclear Physics**            |          |                 |                             |
-|electronvolt                   |`eV`      |`1.602176634` `e-19`  |`kg` `m2` `s-2`              |
-|kilo-electronvolt              |`keV`     |`1.602176634` `e-16`  |`kg` `m2` `s-2`              |
-|mega-electronvolt              |`MeV`     |`1.602176634` `e-13`  |`kg` `m2` `s-2`              |
-|giga-electronvolt              |`GeV`     |`1.602176634` `e-10`  |`kg` `m2` `s-2`              |
-|tera-electronvolt              |`TeV`     |`1.602176634` `e-07`  |`kg` `m2` `s-2`              |
-|electronvolt per speed of light|`eVpc`    |`5.34428599268` `e-28`|`kg` `m` `s-1`               |
-|mega-electronvolt per c        |`MeVpc`   |`5.34428599268` `e-22`|`kg` `m` `s-1`               |
-|electronvolt per c squared     |`eVpc2`   |`1.78266192163` `e-36`|`kg`                         |
-|mega-electronvolt per c squared|`MeVpc2`  |`1.78266192163` `e-30`|`kg`                         |
+|electronvolt                   |`eV`      |1.602176634`e-19`  |`kg` `m2` `s-2`              |
+|kilo-electronvolt              |`keV`     |1.602176634`e-16`  |`kg` `m2` `s-2`              |
+|mega-electronvolt              |`MeV`     |1.602176634`e-13`  |`kg` `m2` `s-2`              |
+|giga-electronvolt              |`GeV`     |1.602176634`e-10`  |`kg` `m2` `s-2`              |
+|tera-electronvolt              |`TeV`     |1.602176634`e-07`  |`kg` `m2` `s-2`              |
+|electronvolt per speed of light|`eVpc`    |5.34428599268`e-28`|`kg` `m` `s-1`               |
+|mega-electronvolt per c        |`MeVpc`   |5.34428599268`e-22`|`kg` `m` `s-1`               |
+|electronvolt per c squared     |`eVpc2`   |1.78266192163`e-36`|`kg`                         |
+|mega-electronvolt per c squared|`MeVpc2`  |1.78266192163`e-30`|`kg`                         |
 |                               |          |                 |                             |
 |**Cosmology**                  |          |                 |                             |
 |gravitational constant         |`G`       |6.6743`e-11`       |`kg-1` `m3` `s-2`            |
