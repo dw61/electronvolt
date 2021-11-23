@@ -17,7 +17,7 @@ A physics quantity calculator with units.
 
 Rest mass of an electron
 
-```
+```python
 >>> from electronvolt import *
 >>> me
 9.1093837015e-31 * kg
@@ -25,14 +25,14 @@ Rest mass of an electron
 
 Rest energy of the electron, in [SI](https://en.wikipedia.org/wiki/International_System_of_Units) units
 
-```
+```python
 >>> me * c**2
 8.187105776823886e-14 * m**2 * s**-2 * kg
 ```
 
 In mega electronvolts
 
-```
+```python
 >>> me * c**2 / MeV
 0.5109989499961642
 ```
@@ -41,7 +41,7 @@ This matches the electron rest energy on [this](https://en.wikipedia.org/wiki/El
 
 **Rest mass of an electron, with [uncertainties](https://github.com/lebigot/uncertainties)**
 
-```
+```python
 >>> from uncertainties import ufloat
 >>> ume = ufloat(9.1093837015, 0.0000000028) * 1e-31 * kg
 >>> ume
@@ -50,7 +50,7 @@ This matches the electron rest energy on [this](https://en.wikipedia.org/wiki/El
 
 Rest energy of the electron, with uncertainties
 
-```
+```python
 >>> ume * c**2
 (8.1871057768+/-0.0000000025)e-14 * kg * s**-2 * m**2
 ```
