@@ -204,11 +204,11 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |microcurie                     |`uCi`     |37000            |`s-1`                        |
 |                               |          |                 |                             |
 |**Nuclear Physics**            |          |                 |                             |
-|electronvolt                   |`eV`      |1.602176634`e-19`  |`kg` `m2` `s-2`              |
-|kilo-electronvolt              |`keV`     |1.602176634`e-16`  |`kg` `m2` `s-2`              |
-|mega-electronvolt              |`MeV`     |1.602176634`e-13`  |`kg` `m2` `s-2`              |
-|giga-electronvolt              |`GeV`     |1.602176634`e-10`  |`kg` `m2` `s-2`              |
-|tera-electronvolt              |`TeV`     |1.602176634`e-07`  |`kg` `m2` `s-2`              |
+|electronvolt                   |`eV`      |`1.602176634``e-19`  |`kg` `m2` `s-2`              |
+|kilo-electronvolt              |`keV`     |`1.602176634``e-16`  |`kg` `m2` `s-2`              |
+|mega-electronvolt              |`MeV`     |`1.602176634``e-13`  |`kg` `m2` `s-2`              |
+|giga-electronvolt              |`GeV`     |`1.602176634``e-10`  |`kg` `m2` `s-2`              |
+|tera-electronvolt              |`TeV`     |`1.602176634``e-07`  |`kg` `m2` `s-2`              |
 |electronvolt per speed of light|`eVpc`    |5.34428599268`e-28`|`kg` `m` `s-1`               |
 |mega-electronvolt per c        |`MeVpc`   |5.34428599268`e-22`|`kg` `m` `s-1`               |
 |electronvolt per c squared     |`eVpc2`   |1.78266192163`e-36`|`kg`                         |
