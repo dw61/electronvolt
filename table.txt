@@ -1,6 +1,5 @@
 todo:
 dollar, util
-test for unit
 
 Math Constants
 pi          3.14159265358979
