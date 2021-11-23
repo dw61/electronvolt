@@ -1,8 +1,6 @@
 todo:
-reformat table
 dollar, util
 test for unit
-indentation for lintering
 
 Math Constants
 pi          3.14159265358979
