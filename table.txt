@@ -1,3 +1,8 @@
+todo:
+reformat table
+dollar, util
+test for unit
+indentation for lintering
 
 Math Constants
 pi          3.14159265358979
@@ -158,4 +163,3 @@ ly          9.4607304725808e+15      m
 pc          3.08567758149137e+16     m
 Mpc         3.08567758149137e+22     m
 H0          2.33336108839994e-18     s**-1
-
