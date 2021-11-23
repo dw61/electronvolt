@@ -20,14 +20,14 @@ Rest mass of an electron
 ```
 >>> from electronvolt import *
 >>> me
-9.1093837015 `e-31` * kg
+9.1093837015e-31 * kg
 ```
 
 Rest energy of the electron, in [SI](https://en.wikipedia.org/wiki/International_System_of_Units) units
 
 ```
 >>> me * c**2
-8.187105776823886 `e-14` * m**2 * s**-2 * kg
+8.187105776823886e-14 * m**2 * s**-2 * kg
 ```
 
 In mega electronvolts
@@ -43,16 +43,16 @@ This matches the electron rest energy on [this](https://en.wikipedia.org/wiki/El
 
 ```
 >>> from uncertainties import ufloat
->>> ume = ufloat(9.1093837015, 0.0000000028) * 1 `e-31` * kg
+>>> ume = ufloat(9.1093837015, 0.0000000028) * 1e-31 * kg
 >>> ume
-(9.1093837015+/-0.0000000028) `e-31` * kg
+(9.1093837015+/-0.0000000028)e-31 * kg
 ```
 
 Rest energy of the electron, with uncertainties
 
 ```
 >>> ume * c**2
-(8.1871057768+/-0.0000000025) `e-14` * kg * s**-2 * m**2
+(8.1871057768+/-0.0000000025)e-14 * kg * s**-2 * m**2
 ```
 
 This matches the electron rest energy on the [same](https://en.wikipedia.org/wiki/Electron_rest_mass) Wikipedia page.
@@ -67,12 +67,12 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |Euler's number                 |`euler`   |2.718281828459045|                             |
 |                               |          |                 |                             |
 |**Metric Prefixes**            |          |                 |                             |
-|                               |`yotta`   |1 `E+24`            |                             |
-|                               |`zetta`   |1 `E+21`            |                             |
-|                               |`exa`     |1 `E+18`            |                             |
-|                               |`peta`    |1 `E+15`            |                             |
-|                               |`tera`    |1 `E+12`            |                             |
-|                               |`giga`    |1 `E+09`            |                             |
+|                               |`yotta`   |1`+24`            |                             |
+|                               |`zetta`   |1`+21`            |                             |
+|                               |`exa`     |1`+18`            |                             |
+|                               |`peta`    |1`+15`            |                             |
+|                               |`tera`    |1`+12`            |                             |
+|                               |`giga`    |1`+09`            |                             |
 |                               |`mega`    |1000000          |                             |
 |                               |`kilo`    |1000             |                             |
 |                               |`hecto`   |100              |                             |
@@ -80,20 +80,20 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |                               |`deci`    |0.1              |                             |
 |                               |`centi`   |0.01             |                             |
 |                               |`milli`   |0.001            |                             |
-|                               |`micro`   |1 `E-06`            |                             |
-|                               |`nano`    |1 `E-09`            |                             |
-|                               |`pico`    |1 `E-12`            |                             |
-|                               |`femto`   |1 `E-15`            |                             |
-|                               |`atto`    |1 `E-18`            |                             |
-|                               |`zepto`   |1 `E-21`            |                             |
-|                               |`yocto`   |1 `E-24`            |                             |
+|                               |`micro`   |1`-06`            |                             |
+|                               |`nano`    |1`-09`            |                             |
+|                               |`pico`    |1`-12`            |                             |
+|                               |`femto`   |1`-15`            |                             |
+|                               |`atto`    |1`-18`            |                             |
+|                               |`zepto`   |1`-21`            |                             |
+|                               |`yocto`   |1`-24`            |                             |
 |                               |          |                 |                             |
 |**Common Prefixes**            |          |                 |                             |
 |                               |`hundred` |100              |                             |
 |                               |`thousand`|1000             |                             |
 |                               |`million` |1000000          |                             |
-|                               |`billion` |1 `E+09`            |                             |
-|                               |`trillion`|1 `E+12`            |                             |
+|                               |`billion` |1`+09`            |                             |
+|                               |`trillion`|1`+12`            |                             |
 |                               |          |                 |                             |
 |**SI Base Units**              |          |                 |                             |
 |second                         |`s`       |1                |`s`                          |
@@ -111,25 +111,25 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |                               |`week`    |604800           |`s`                          |
 |                               |`year`    |31557600         |`s`                          |
 |millisecond                    |`ms`      |0.001            |`s`                          |
-|microsecond                    |`us`      |1 `E-06`            |`s`                          |
-|nanosecond                     |`ns`      |1 `E-09`            |`s`                          |
+|microsecond                    |`us`      |1`-06`            |`s`                          |
+|nanosecond                     |`ns`      |1`-09`            |`s`                          |
 |                               |          |                 |                             |
 |**Length**                     |          |                 |                             |
 |kilometer                      |`km`      |1000             |`m`                          |
 |decimeter                      |`dm`      |0.1              |`m`                          |
 |centimeter                     |`cm`      |0.01             |`m`                          |
 |millimeter                     |`mm`      |0.001            |`m`                          |
-|micrometer                     |`um`      |1 `E-06`            |`m`                          |
-|nanometer                      |`nm`      |1 `E-09`            |`m`                          |
-|picometer                      |`pm`      |1 `E-12`            |`m`                          |
-|femtometer                     |`fm`      |1 `E-15`            |`m`                          |
+|micrometer                     |`um`      |1`-06`            |`m`                          |
+|nanometer                      |`nm`      |1`-09`            |`m`                          |
+|picometer                      |`pm`      |1`-12`            |`m`                          |
+|femtometer                     |`fm`      |1`-15`            |`m`                          |
 |                               |          |                 |                             |
 |**Frequency**                  |          |                 |                             |
 |hertz                          |`Hz`      |1                |`s-1`                        |
 |kilohertz                      |`kHz`     |1000             |`s-1`                        |
 |megahertz                      |`MHz`     |1000000          |`s-1`                        |
-|gigahertz                      |`GHz`     |1 `E+09`            |`s-1`                        |
-|terahertz                      |`THz`     |1 `E+12`            |`s-1`                        |
+|gigahertz                      |`GHz`     |1`+09`            |`s-1`                        |
+|terahertz                      |`THz`     |1`+12`            |`s-1`                        |
 |                               |          |                 |                             |
 |**Classical Mechanics**        |          |                 |                             |
 |gravitational acceleration     |`g`       |9.80665          |`m` `s-2`                    |
@@ -139,10 +139,10 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |watt                           |`W`       |1                |`kg` `m2` `s-3`              |
 |                               |          |                 |                             |
 |**Thermodynamics**             |          |                 |                             |
-|Planck constant                |`h`       |6.62607015 `E-34`   |`kg` `m2` `s-1`              |
-|reduced Planck constant        |`hbar`    |1.05457181765 `E-34`|`kg` `m2` `s-1`              |
-|Avogadro constant              |`NA`      |6.02214076 `E+23`   |`mol-1`                      |
-|Boltzmann constant             |`kB`      |1.380649 `E-23`     |`kg` `m2` `s-2` `K-1`        |
+|Planck constant                |`h`       |6.62607015`-34`   |`kg` `m2` `s-1`              |
+|reduced Planck constant        |`hbar`    |1.05457181765`-34`|`kg` `m2` `s-1`              |
+|Avogadro constant              |`NA`      |6.02214076`+23`   |`mol-1`                      |
+|Boltzmann constant             |`kB`      |1.380649`-23`     |`kg` `m2` `s-2` `K-1`        |
 |ideal gas constant             |`R`       |8.31446261815324 |`kg` `mol-1` `K-1` `m2` `s-2`|
 |                               |          |                 |                             |
 |**Electromagnetism**           |          |                 |                             |
@@ -154,10 +154,10 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |weber                          |`Wb`      |1                |`kg` `m2` `s-2` `A-1`        |
 |henry                          |`H`       |1                |`kg` `A-2` `m2` `s-2`        |
 |speed of light                 |`c`       |299792458        |`m` `s-1`                    |
-|vacuum magnetic permeability   |`mu0`     |1.25663706212 `E-06`|`kg` `A-2` `m` `s-2`         |
-|vacuum electric permittivity   |`epsilon0`|8.8541878128 `E-12` |`kg-1` `m-3` `s4` `A2`       |
+|vacuum magnetic permeability   |`mu0`     |1.25663706212`-06`|`kg` `A-2` `m` `s-2`         |
+|vacuum electric permittivity   |`epsilon0`|8.8541878128`-12` |`kg-1` `m-3` `s4` `A2`       |
 |Coulomb constant               |`k`       |8987551792.26078 |`kg` `m3` `s-4` `A-2`        |
-|elementary charge              |`e`       |1.602176634 `E-19`  |`s` `A`                      |
+|elementary charge              |`e`       |1.602176634`-19`  |`s` `A`                      |
 |                               |          |                 |                             |
 |**Imperial Units**             |          |                 |                             |
 |inch ('in' is a python keyword)|`in_`     |0.0254           |`m`                          |
@@ -183,41 +183,41 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |hectare                        |`ha`      |10000            |`m2`                         |
 |                               |          |                 |                             |
 |**Atomic Physics**             |          |                 |                             |
-|electron rest mass             |`me`      |9.1093837015 `E-31` |`kg`                         |
-|proton mass                    |`mp`      |1.67262192369 `E-27`|`kg`                         |
-|neutron mass                   |`mn`      |1.67492749804 `E-27`|`kg`                         |
-|atomic mass unit               |`u`       |1.6605390666 `E-27` |`kg`                         |
-|atomic mass of hydrogen        |`mH`      |1.6735327848 `E-27` |`kg`                         |
-|atomic mass of helium          |`mHe`     |6.64647698905 `E-27`|`kg`                         |
+|electron rest mass             |`me`      |9.1093837015`-31` |`kg`                         |
+|proton mass                    |`mp`      |1.67262192369`-27`|`kg`                         |
+|neutron mass                   |`mn`      |1.67492749804`-27`|`kg`                         |
+|atomic mass unit               |`u`       |1.6605390666`-27` |`kg`                         |
+|atomic mass of hydrogen        |`mH`      |1.6735327848`-27` |`kg`                         |
+|atomic mass of helium          |`mHe`     |6.64647698905`-27`|`kg`                         |
 |                               |          |                 |                             |
 |**Quantum Mechanics**          |          |                 |                             |
-|Stefan-Boltzmann constant      |`sigma`   |5.67037441918 `E-08`|`kg` `K-4` `s-3`             |
-|Bohr radius                    |`a0`      |5.29177210906 `E-11`|`m`                          |
-|hydrogen ground state energy   |`hground` |-2.1798723611 `E-18`|`kg` `m2` `s-2`              |
+|Stefan-Boltzmann constant      |`sigma`   |5.67037441918`-08`|`kg` `K-4` `s-3`             |
+|Bohr radius                    |`a0`      |5.29177210906`-11`|`m`                          |
+|hydrogen ground state energy   |`hground` |-2.1798723611`-18`|`kg` `m2` `s-2`              |
 |fine-structure constant        |`alpha`   |0.007297352569278|                             |
 |Rydberg constant               |`Rydberg` |10973731.56807162|`m-1`                        |
 |                               |          |                 |                             |
 |**Radioactive Decays**         |          |                 |                             |
 |becquerel                      |`Bq`      |1                |`s-1`                        |
-|curie                          |`Ci`      |3.7 `E+10`          |`s-1`                        |
+|curie                          |`Ci`      |3.7`+10`          |`s-1`                        |
 |millicurie                     |`mCi`     |37000000         |`s-1`                        |
 |microcurie                     |`uCi`     |37000            |`s-1`                        |
 |                               |          |                 |                             |
 |**Nuclear Physics**            |          |                 |                             |
-|electronvolt                   |`eV`      |1.602176634 `E-19`  |`kg` `m2` `s-2`              |
-|kilo-electronvolt              |`keV`     |1.602176634 `E-16`  |`kg` `m2` `s-2`              |
-|mega-electronvolt              |`MeV`     |1.602176634 `E-13`  |`kg` `m2` `s-2`              |
-|giga-electronvolt              |`GeV`     |1.602176634 `E-10`  |`kg` `m2` `s-2`              |
-|tera-electronvolt              |`TeV`     |1.602176634 `E-07`  |`kg` `m2` `s-2`              |
-|electronvolt per speed of light|`eVpc`    |5.34428599268 `E-28`|`kg` `m` `s-1`               |
-|mega-electronvolt per c        |`MeVpc`   |5.34428599268 `E-22`|`kg` `m` `s-1`               |
-|electronvolt per c squared     |`eVpc2`   |1.78266192163 `E-36`|`kg`                         |
-|mega-electronvolt per c squared|`MeVpc2`  |1.78266192163 `E-30`|`kg`                         |
+|electronvolt                   |`eV`      |1.602176634`-19`  |`kg` `m2` `s-2`              |
+|kilo-electronvolt              |`keV`     |1.602176634`-16`  |`kg` `m2` `s-2`              |
+|mega-electronvolt              |`MeV`     |1.602176634`-13`  |`kg` `m2` `s-2`              |
+|giga-electronvolt              |`GeV`     |1.602176634`-10`  |`kg` `m2` `s-2`              |
+|tera-electronvolt              |`TeV`     |1.602176634`-07`  |`kg` `m2` `s-2`              |
+|electronvolt per speed of light|`eVpc`    |5.34428599268`-28`|`kg` `m` `s-1`               |
+|mega-electronvolt per c        |`MeVpc`   |5.34428599268`-22`|`kg` `m` `s-1`               |
+|electronvolt per c squared     |`eVpc2`   |1.78266192163`-36`|`kg`                         |
+|mega-electronvolt per c squared|`MeVpc2`  |1.78266192163`-30`|`kg`                         |
 |                               |          |                 |                             |
 |**Cosmology**                  |          |                 |                             |
-|gravitational constant         |`G`       |6.6743 `E-11`       |`kg-1` `m3` `s-2`            |
+|gravitational constant         |`G`       |6.6743`-11`       |`kg-1` `m3` `s-2`            |
 |astronomical unit              |`au`      |149597870700     |`m`                          |
 |light-year                     |`ly`      |9460730472580800 |`m`                          |
-|parsec                         |`pc`      |3.08567758149 `E+16`|`m`                          |
-|megaparsec                     |`Mpc`     |3.08567758149 `E+22`|`m`                          |
-|Hubble parameter               |`H0`      |2.3333610884 `E-18` |`s-1`                        |
+|parsec                         |`pc`      |3.08567758149`+16`|`m`                          |
+|megaparsec                     |`Mpc`     |3.08567758149`+22`|`m`                          |
+|Hubble parameter               |`H0`      |2.3333610884`-18` |`s-1`                        |
