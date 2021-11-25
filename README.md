@@ -1,5 +1,7 @@
 A physics quantity calculator with units.
 
+**If you are using this package, I'd like to hear your thoughts!** You can [email](mailto:diego@email.virginia.edu) me, open an [issue](https://github.com/dw61/electronvolt/issues/new), or start a [discussion](https://github.com/dw61/electronvolt/discussions/new). Anything is appreciated!
+
 # Usage
 
 * Install this module via `pip install electronvolt`.
