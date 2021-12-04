@@ -23,6 +23,8 @@
 0.5109989499961642
 ```
 
+This matches the electron rest energy on [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
+
 # Usage
 
 * Install this module via `pip install electronvolt`.
@@ -35,8 +37,6 @@
 * Use shift+enter to run a block of code.
 * Run the first block to initialize the calculator.
 * Run the second block to feel how it works.
-
-This matches the electron rest energy on [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
 
 # Units and Constants
 
