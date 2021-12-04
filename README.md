@@ -1,7 +1,3 @@
-A physics quantity calculator with units.
-
-**If you are using this package, I'd like to hear your thoughts!** You can [email](mailto:diego@email.virginia.edu) me, open an [issue](https://github.com/dw61/electronvolt/issues/new), or start a [discussion](https://github.com/dw61/electronvolt/discussions/new). Anything is appreciated!
-
 # Usage
 
 * Install this module via `pip install electronvolt`.
@@ -17,47 +13,30 @@ A physics quantity calculator with units.
 
 # Demo
 
-Rest mass of an electron
-
+##### Import package
 ```python
 >>> from electronvolt import *
+```
+
+##### Rest mass of an electron
+```python
 >>> me
 9.1093837015e-31 * kg
 ```
 
-Rest energy of the electron, in [SI](https://en.wikipedia.org/wiki/International_System_of_Units) units
-
+##### Rest energy of the electron, in [SI](https://en.wikipedia.org/wiki/International_System_of_Units) units
 ```python
 >>> me * c**2
 8.187105776823886e-14 * m**2 * s**-2 * kg
 ```
 
-In mega electronvolts
-
+##### In mega electronvolts
 ```python
 >>> me * c**2 / MeV
 0.5109989499961642
 ```
 
-This matches the electron rest energy on [this](https://en.wikipedia.org/wiki/Electron_rest_mass) Wikipedia page.
-
-**Rest mass of an electron, with [uncertainties](https://github.com/lebigot/uncertainties)**
-
-```python
->>> from uncertainties import ufloat
->>> ume = ufloat(9.1093837015, 0.0000000028) * 1e-31 * kg
->>> ume
-(9.1093837015+/-0.0000000028)e-31 * kg
-```
-
-Rest energy of the electron, with uncertainties
-
-```python
->>> ume * c**2
-(8.1871057768+/-0.0000000025)e-14 * kg * s**-2 * m**2
-```
-
-This matches the electron rest energy on the [same](https://en.wikipedia.org/wiki/Electron_rest_mass) Wikipedia page.
+This matches the electron rest energy on [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
 
 # Units and Constants
 
@@ -223,3 +202,23 @@ This matches the electron rest energy on the [same](https://en.wikipedia.org/wik
 |parsec                         |`pc`      |3.08567758149`e+16`|`m`                          |
 |megaparsec                     |`Mpc`     |3.08567758149`e+22`|`m`                          |
 |Hubble parameter               |`H0`      |2.3333610884`e-18` |`s-1`                        |
+
+# More Demo
+
+##### Import [uncertainties](https://github.com/lebigot/uncertainties)
+```python
+>>> from uncertainties import ufloat
+```
+
+##### Rest mass of an electron
+```python
+>>> me = ufloat(9.1093837015, 0.0000000028) * 1e-31 * kg
+```
+
+##### Rest energy of the electron
+```python
+>>> me * c**2
+(8.1871057768+/-0.0000000025)e-14 * kg * s**-2 * m**2
+```
+
+This matches the electron rest energy on the [same](https://en.wikipedia.org/wiki/Electron_rest_mass) Wikipedia page.
