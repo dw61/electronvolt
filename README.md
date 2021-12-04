@@ -1,16 +1,3 @@
-# Usage
-
-* Install this module via `pip install electronvolt`.
-* Recommended to use in an interactive python environment, e.g. jupyter notebook.
-* Recommended to import via `from electronvolt import *`.
-
-#### You can also run this module online [**HERE**](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb).
-
-* This page typically loads within 3 minutes.
-* Use shift+enter to run a block of code.
-* Run the first block to initialize the calculator.
-* Run the second block to feel how it works.
-
 # Demo
 
 ##### Import package
@@ -35,6 +22,19 @@
 >>> me * c**2 / MeV
 0.5109989499961642
 ```
+
+# Usage
+
+* Install this module via `pip install electronvolt`.
+* Recommended to use in an interactive python environment, e.g. jupyter notebook.
+* Recommended to import via `from electronvolt import *`.
+
+#### You can also run this module online [**HERE**](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb).
+
+* This page typically loads within 3 minutes.
+* Use shift+enter to run a block of code.
+* Run the first block to initialize the calculator.
+* Run the second block to feel how it works.
 
 This matches the electron rest energy on [Wikipedia](https://en.wikipedia.org/wiki/Electron_rest_mass).
 
