@@ -337,7 +337,7 @@ for symbol, object_ in globals().copy().items():
             table += "\nMetric Prefixes\n"
         elif symbol == "hundred":
             table += "\nCommon Prefixes\n"
-        table += f"{symbol:<12}{object_:.15g}\n"
+        table += f"{symbol:<11}{object_:.15g}\n"
 
     if isinstance(object_, Quantity):
         if symbol == "s":
@@ -368,4 +368,4 @@ for symbol, object_ in globals().copy().items():
             table += "\nNuclear Physics\n"
         elif symbol == "G":
             table += "\nCosmology\n"
-        table += f"{symbol:<12}{object_.value:<25.15g}{object_.unit}\n"
+        table += f"{symbol:<11}{object_.value:<24.15g}{object_.unit}\n"
