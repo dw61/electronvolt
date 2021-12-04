@@ -12,7 +12,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="electronvolt",
-    version="1.5.10",
+    version="1.5.11",
     author_email="lw7jz@virginia.edu",
     description="A physics quantity calculator with units.",
     long_description=long_description,
