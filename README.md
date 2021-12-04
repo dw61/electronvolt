@@ -1,23 +1,23 @@
 # Demo
 
-##### Import package
+#### Import module
 ```python
 >>> from electronvolt import *
 ```
 
-##### Rest mass of an electron
+#### Rest mass of an electron
 ```python
 >>> me
 9.1093837015e-31 * kg
 ```
 
-##### Rest energy of the electron, in [SI](https://en.wikipedia.org/wiki/International_System_of_Units) units
+#### Rest energy of the electron, in [SI](https://en.wikipedia.org/wiki/International_System_of_Units) units
 ```python
 >>> me * c**2
 8.187105776823886e-14 * m**2 * s**-2 * kg
 ```
 
-##### In mega electronvolts
+#### In mega electronvolts
 ```python
 >>> me * c**2 / MeV
 0.5109989499961642
@@ -27,16 +27,11 @@ This matches the electron rest energy on [Wikipedia](https://en.wikipedia.org/wi
 
 # Usage
 
-* Install this module via `pip install electronvolt`.
-* Recommended to use in an interactive python environment, e.g. jupyter notebook.
-* Recommended to import via `from electronvolt import *`.
+Install via `pip install electronvolt`.
 
-#### You can also run this module online [**HERE**](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb).
-
-* This page typically loads within 3 minutes.
-* Use shift+enter to run a block of code.
-* Run the first block to initialize the calculator.
-* Run the second block to feel how it works.
+#### Alternatively, run this module [online](https://mybinder.org/v2/gh/dw61/electronvolt/HEAD?filepath=online.ipynb)
+* Typically loads within 3 minutes.
+* Shift+enter to run a block of code. Run first block to initialize the calculator.
 
 # Units and Constants
 
@@ -205,17 +200,17 @@ This matches the electron rest energy on [Wikipedia](https://en.wikipedia.org/wi
 
 # More Demo
 
-##### Import [uncertainties](https://github.com/lebigot/uncertainties)
+#### Import [uncertainties](https://github.com/lebigot/uncertainties)
 ```python
 >>> from uncertainties import ufloat
 ```
 
-##### Rest mass of an electron
+#### Rest mass of an electron
 ```python
 >>> me = ufloat(9.1093837015, 0.0000000028) * 1e-31 * kg
 ```
 
-##### Rest energy of the electron
+#### Rest energy of the electron
 ```python
 >>> me * c**2
 (8.1871057768+/-0.0000000025)e-14 * kg * s**-2 * m**2
